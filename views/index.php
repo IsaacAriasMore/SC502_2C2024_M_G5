@@ -70,17 +70,8 @@
 
     </div>
   </div>
-  <p class="frase">"En cada persona que conocemos hay una historia que merece ser escuchada y un futuro que merece ser apoyado."</p>
-
-
-
-
-
-
-
-
-
-
+  <p class="frase" style="margin-bottom: 40px;">"En cada persona que conocemos hay una historia que merece ser escuchada y un futuro que merece ser apoyado."</p>
+  
 
 
   <footer>
