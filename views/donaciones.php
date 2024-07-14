@@ -12,45 +12,43 @@
 include 'plantilla.php';
 ?>
 
-<aside style="margin-top: 0px; background-color: whitesmoke; float: left;  width: 280px; height: 765px; text-align: center;
+<aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left;  width: 380px; height: 765px; text-align: center;
     align-items: center;" >
 <br>
-<h1 class="titulo" style="text-shadow: 3px 2px #B8B6B6; margin-top: 30px">DONACIONES PERMITIDAS</h1>
-<p class="inf" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+<h1 class="titulo1" style="margin-top: 30px">DONACIONES PERMITIDAS</h1>
+<p class="info1" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
 Economicas</p>
-<p class="inf" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
+<p class="info2" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
 Canasta de viveres
 </p>
-<p class="inf" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
+<p class="info3" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
 Transporte
 </p>
-<p class="inf" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
+<p class="info4" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
 Hospedaje
 </p>
 <br>
-<img src="assets/img/fotoRefugi.png" style="width: 250px; height: 180px;">
+<img class="img" src="assets/img/fotoRefugi.png" style="width: 250px; height: 180px;">
 </aside>
 
 
-<aside style="margin-top: 0px; background-color: whitesmoke; float: right;  width: 280px; height: 765px; text-align: center;
+<aside class="de" style="margin-top: 0px; background-color: #04282c; float: right;  width: 380px; height: 765px; text-align: center;
     align-items: center;" >
 <br>
-<h1 class="title" style="text-shadow: 3px 2px #B8B6B6; margin-top: 30px">DONACIONES RAPIDAS</h1>
-<p class="info" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+<h1 class="titulo2" style=" margin-top: 30px">DONACIONES RAPIDAS</h1>
+<p class="info5" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
 Sinpe Movil</p>
-<p class="info" style=" font-size: 20px; font-style: italic; margin-top: 5px; text-align: center;">
+<p class="info6" style=" font-size: 20px; font-style: italic; margin-top: 5px; text-align: center;">
 8861-2443
 </p>
-<p class="info" style=" font-size: 30px; font-style: italic; margin-top: 30px; text-align: center;">
+<p class="info7" style=" font-size: 30px; font-style: italic; margin-top: 30px; text-align: center;">
 Cuenta Bancaria
 </p>
-<p class="info" style=" font-size: 20px; font-style: italic; margin-top: 5px; text-align: center;">
+<p class="info8" style=" font-size: 20px; font-style: italic; margin-top: 5px; text-align: center;">
 CR10001097089219863
 </p>
 <br>
-<img src="assets/img/foto2refug.jpg" style="width: 250px; height: 180px;">
-
-
+<img class="img" src="assets/img/foto2refug.jpg" style="width: 250px; height: 180px;">
 </aside>
  <section id="myForm" style="margin-top: 100px;">
     <br>

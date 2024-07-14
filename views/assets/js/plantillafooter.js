@@ -1,13 +1,11 @@
-var config = {
-    reset:  true,
-    mobile: true
-  }
 
-window.sr = ScrollReveal(config);
+window.sr = ScrollReveal();
 
 sr.reveal('.footer', {
-    duration: 3000,
-    origin: 'top',
-    distance:'-100px'
-});
+    duration: 2000,
+    origin: 'bottom',
+    distance:'50px',
+    reset:  true,
+  });
+  
 
