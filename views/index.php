@@ -72,6 +72,19 @@
   </div>
   <p class="frase" style="margin-bottom: 40px;">"En cada persona que conocemos hay una historia que merece ser escuchada y un futuro que merece ser apoyado."</p>
   
+  <div class="historia">
+    <div>
+      <h1 class="title">Como nace INMIGRAWEB</h1>
+    </div>
+    <div class="texto">
+ <p>Nació de la necesidad de brindar apoyo y esperanza a quienes, por diversas razones, debían
+    abandonar sus países de origen. Cada voluntario de INMIGRAWEB tenía una historia personal que los conectaba
+    profundamente con la misión de la fundación. Algunos habían sido migrantes ellos mismos, otros habían
+    visto a sus seres queridos enfrentar los desafíos de la migración, y otros simplemente sentían una profunda empatía por quienes buscaban
+    una vida mejor. Cada voluntario traía consigo no solo su tiempo y habilidades, sino también su pasión y su deseo
+    de marcar una diferencia tangible en la vida de los demás. </p>
+    </div>
+  </div>
 
 
   <footer>

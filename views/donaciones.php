@@ -11,6 +11,7 @@
 <?php
 include 'plantilla.php';
 ?>
+
 <aside style="margin-top: 0px; background-color: whitesmoke; float: left;  width: 280px; height: 765px; text-align: center;
     align-items: center;" >
 <br>

@@ -87,3 +87,21 @@ position: sticky;
 .frase{
     text-align: center;
 }
+.historia {
+    max-height: 1400px;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    font-size: 20;
+    text-align: center;
+} .title{
+    font-weight: bold;
+    font-size: 150px;
+}
+.texto{
+    font-size: 2em;
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 1200px;
+ 
+ 
+}
