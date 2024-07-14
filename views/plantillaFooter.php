@@ -12,7 +12,7 @@
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center  p-4 border-bottom" >
     <!-- Right -->
-    <div class="red">
+    <div class="red1">
       <a href="https://www.instagram.com" class="me-4 text-reset">
         <i class="fab fa-instagram">instagram</i>
       </a>
