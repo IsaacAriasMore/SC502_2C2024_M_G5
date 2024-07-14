@@ -38,7 +38,7 @@
           <h6 class="text-uppercase fw-bold mb-4">
             <i class="fas fa-gem me-3"></i>INMIGRAWEB
           </h6>
-          <p>
+          <p class="ix">
           InmigraWeb es una organización dedicada a asistir a inmigrantes en el proceso de salir de su país de origen
            y alcanzar su destino deseado de manera segura y eficiente. La organización ofrece una variedad de servicios,
             incluyendo asesoría legal, apoyo en la tramitación de documentos, orientación sobre derechos y deberes en el país
@@ -48,13 +48,13 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Contactenos</h6>
-          <p><i class="fas fa-home me-3"></i> San Pedro , San Jose , Costa Rica</p>
-          <p>
+          <p class="ix"><i class="fas fa-home me-3"></i> San Pedro , San Jose , Costa Rica</p>
+          <p class="ix">
             <i class="fas fa-envelope me-3"></i>
             inmigra@gmail.com
           </p>
-          <p><i class="fas fa-phone me-3"></i> +506 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> +506 456 432 98</p>
+          <p class="ix"><i class="fas fa-phone me-3"></i> +506 234 567 88</p>
+          <p class="ix"><i class="fas fa-print me-3"></i> +506 456 432 98</p>
         </div>
         <!-- Grid column -->
       </div>
