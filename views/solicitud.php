@@ -47,6 +47,8 @@
 
                 <div class="forms">
 
+                <h1>En Caso de venir solo</h1>
+
                     <div class="forms1">
                         <div class="form-group">
                             <label for="inputNombre">Nombre</label>
@@ -83,6 +85,8 @@
                         </div>
                     </div>
                     <div class="dividor"></div>
+
+                    <h1>En Caso de ser varios</h1>
 
                     <div class="forms2">
                         <div class="form-group">
@@ -125,17 +129,13 @@
                             <select id="inputState" class="form-control">
                                 <option selected value="panama">frontera Panama</option>
                                 <option value="nicaragua">frontera Nicaragua</option>
+                                <option value="Otros">Quedarse a vivir aqui</option>
                             </select>
                         </div>
                     </div>
 
                 </div>
             </div>
-
-
-
-
-
 
         </div>
         <div class="d-flex justify-content-center mt-5 form-check">
@@ -145,33 +145,67 @@
             </label>
         </div>
         <div class="d-flex justify-content-center mt-2">
-            <button type="button" class="boton btn btn-success">solicitar</button>
-        </div>
-    </div>
-    </div>
+    <button type="button" class="boton btn btn-success" id="solicitarBtn">Solicitar</button>
+</div>
 
     </div>
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+    </div>
+    </div>
 
     <footer>
         <?php
         include 'plantillafooter.php';
         ?>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+    document.getElementById('solicitarBtn').addEventListener('click', function() {
+    document.querySelectorAll('.form-control').forEach(input => input.value = '');
+    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
+    alert('Información enviada, gracias por contar con nosotros');
+    });
+    </script>
+
+
+<section class="container" id="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.elsoldemexico.com.mx/mexico/sociedad/1do9pr-2021-08-26t152044z_1849224472_rc23dp9k0u44_rtrmadp_3_usa-immigration-mexico.jpg/ALTERNATES/LANDSCAPE_768/2021-08-26T152044Z_1849224472_RC23DP9K0U44_RTRMADP_3_USA-IMMIGRATION-MEXICO.jpg" class="d-block w-100" alt="Suministroa">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxzMx_zRGFWBXS7WNxQZbX1r2vGS3oM4i8A&s" class="d-block w-100" alt="AYUDAR">
+            </div>
+            <div class="carousel-item">
+                <img src="https://es.zenit.org/wp-content/uploads/sites/3/2020/08/083569c9-asistencia-a-migrantes-venezolanos-colombia-c-cortesia.jpg" class="d-block w-100" alt="Compasion">
+            </div>
+            <div class="carousel-item">
+                <img src="https://blogs.iadb.org/educacion/wp-content/uploads/sites/22/2022/10/ninez.migrante.jpg" class="d-block w-100" alt="Niñez Inmigrante">
+            </div>
+            <div class="carousel-item">
+                <img src="https://sinartdigital.com/media/zoo/images/migracion_migrante_venezuela_e9de15d660832c64da6b219fe3016e62.jpg" class="d-block w-100" alt="Venezolanos">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+</body>
+
+</html>
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

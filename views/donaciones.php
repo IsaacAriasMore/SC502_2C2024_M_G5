@@ -72,7 +72,7 @@ CR10001097089219863
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;"> </textarea>
           </div>
           <div class="mb-3 d-flex justify-content-center">
-            <button type="submit" class="btn btn-outline-success btn-lg" >Enviar</button>
+            <button type="submit" id="btn-submit" class="btn btn-outline-success btn-lg" >Enviar</button>
           </div>
         </form>
     </div>
@@ -86,6 +86,16 @@ CR10001097089219863
 include 'plantillafooter.php';
 ?>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+    document.getElementById('btn-submit').addEventListener('click', function() {
+    document.querySelectorAll('.form-control').forEach(input => input.value = '');
+    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
+    alert('Información enviada, gracias por contar con nosotros');
+    });
+    </script>
+
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script> 
