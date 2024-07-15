@@ -14,7 +14,7 @@
   include 'plantilla.php';
   ?>
 
-  <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left;  width: 380px; height: 765px; text-align: center;
+  <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left;  width: 380px; height: 1000px; text-align: center;
     align-items: center;">
     <br>
     <h1 class="titulo1" style="margin-top: 30px">DONACIONES PERMITIDAS</h1>
@@ -31,30 +31,14 @@
     </p>
     <br>
     <img class="img" src="assets/img/fotoRefugi.png" style="width: 250px; height: 180px;">
+    <br>
+   
   </aside>
 
 
-  <aside class="de" style="margin-top: 0px; background-color: #04282c; float: right;  width: 380px; height: 765px; text-align: center;
-    align-items: center;">
-    <br>
-    <h1 class="titulo2" style=" margin-top: 30px">DONACIONES RAPIDAS</h1>
-    <p class="info5" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
-      Sinpe Movil</p>
-    <p class="info6" style=" font-size: 20px; font-style: italic; margin-top: 5px; text-align: center;">
-      8861-2443
-    </p>
-    <p class="info7" style=" font-size: 30px; font-style: italic; margin-top: 30px; text-align: center;">
-      Cuenta Bancaria
-    </p>
-    <p class="info8" style=" font-size: 20px; font-style: italic; margin-top: 5px; text-align: center;">
-      CR10001097089219863
-    </p>
-    <br>
-    <img class="img" src="assets/img/foto2refug.jpg" style="width: 250px; height: 180px;">
-  </aside>
   <section id="myForm" style="margin-top: 100px;">
     <br>
-    <H1 class="text-center" style="text-align: center">Solicitud de donacion</H1>
+    <H1 class="text-center" style="text-align: center; text-shadow: 4px 2px 3px grey;">DONACION</H1>
     <div class="Formulario" style="align-content: center">
       <form id="miFormulario" action="./resibe.html" style="margin-top: 30px;">
         <div class="mb-3">
@@ -66,19 +50,59 @@
           <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="Apellidos Completos">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Telefono</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="XXXX-XXXX">
+          <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="Telefono" placeholder="XXXX-XXXX">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">¿Como deseas ayudar?</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;"> </textarea>
+          <label for="exampleFormControlInput1" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" name="Correo" placeholder="ejemplo1@gmail.com">
         </div>
+        <div class="mb-3">
+          <label for="donacion" class="form-label">Selecciona el tipo de donación</label>
+          <select class="form-select" id="donacion" onchange="updateTotal()">
+            <option value="0">Seleccione...</option>
+            <option value="5000">Canasta de víveres - 5000</option>
+            <option value="2000">Pasajes - 2000</option>
+            <option value="10000">Hospedaje - 10000</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+        
+        <div class="mb-3" id="otherAmountContainer" style="display: none;">
+          <label for="otherAmount" class="form-label">Monto de la donación</label>
+          <input type="number" class="form-control" id="otherAmount" placeholder="Ingrese el monto" oninput="updateTotal()">
+        </div>
+        
+        <div class="mb-3">
+          <label for="totalAmount" class="form-label">Total a donar</label>
+          <input type="text" class="form-control" id="totalAmount" readonly>
+        </div>
+      
+        <div class="mb-3">
+          <label for="metodoPago" class="form-label">Método de Pago</label>
+          <select class="form-select" id="metodoPago" onchange="updatePaymentMethod()">
+            <option value="0">Seleccione...</option>
+            <option value="sinpe">SINPE Móvil</option>
+            <option value="tarjeta">Tarjeta</option>
+          </select>
+        </div>
+        
+        <div class="mb-3" id="sinpeContainer" style="display: none;">
+          <label for="sinpeNumber" class="form-label">Número SINPE Móvil</label>
+          <input type="text" class="form-control" id="sinpeNumber" placeholder="Ingrese el número SINPE">
+        </div>
+        
+        <div class="mb-3" id="tarjetaContainer" style="display: none;">
+          <label for="tarjetaNumber" class="form-label">Número de Tarjeta</label>
+          <input type="text" class="form-control" id="tarjetaNumber" placeholder="Ingrese el número de tarjeta">
+        </div>
+        
         <div class="mb-3 d-flex justify-content-center">
-          <button type="button" id="btn-submit" class="btn btn-outline-success btn-lg">Enviar</button>
+          <button type="button" id="btn-submit" class="btn btn-outline-success btn-lg">ENVIAR</button>
         </div>
       </form>
     </div>
-  </section>
+</section>
 
   <h3 style="margin-top:100px; margin-bottom: 50px; font-style: italic; text-align: center;">"Las pequeñas ayudas tienen grandes recompensas"</h3>
 

@@ -24,17 +24,17 @@
             <P class="txtt" style="font-size: 20px;"><I>Este apartado es una guía detallada sobre las solicitudes y ayudas disponibles para los inmigrantes que buscan cruzar las fronteras de Costa Rica. Aquí, proporcionamos información esencial sobre los trámites necesarios, los documentos requeridos y las organizaciones que ofrecen apoyo. Nuestro objetivo es facilitar el proceso de migración, asegurando que todos los inmigrantes estén bien informados y reciban la ayuda adecuada para una transición segura y legal.</I></P>
             <div class="textos">
                 <div class="text1">
-                    <h1>Trámites y Documentación:</h1>
+                    <h1>Trámites y Documentación</h1>
                     <p><i>Visa de Tránsito y Residencia Temporal: Explicamos los diferentes tipos de visas disponibles, incluyendo las de tránsito y residencia temporal, y los pasos para obtenerlas.</i></p>
                     <p><i>Requisitos Documentales: Una lista detallada de los documentos necesarios, como pasaportes válidos, certificados de antecedentes penales, y pruebas de solvencia económica.</i></p>
                 </div>
                 <div class="text2">
-                    <h1>Organizaciones de Apoyo:</h1>
+                    <h1>Organizaciones de Apoyo</h1>
                     <p><i>ONGs y Entidades Gubernamentales: Información sobre organizaciones no gubernamentales y oficinas gubernamentales que ofrecen asistencia legal, alojamiento temporal, y otros recursos esenciales.</i></p>
                     <p><i>Centros de Ayuda y Refugios: Localización y servicios proporcionados por centros de ayuda y refugios para inmigrantes.</i></p>
                 </div>
                 <div class="text3">
-                    <h1>Asesoría Legal y Asistencia Médica:</h1>
+                    <h1>Asesoría Legal y Asistencia Médica</h1>
                     <p><i>Asesoría Legal Gratuita: Contactos y horarios de organizaciones que proporcionan asesoría legal gratuita para ayudar a los inmigrantes a comprender y completar los requisitos legales.</i></p>
                     <p><i>Servicios Médicos: Información sobre clínicas y servicios médicos disponibles para inmigrantes, incluyendo atención de emergencia y servicios de salud mental.</i></p>
                 </div>
@@ -50,36 +50,36 @@
 
                     <div class="forms1">
                         <div class="form-group">
-                            <label for="inputNombre">Nombre</label>
+                            <label for="inputNombre" style="margin-top:20px;">Nombre</label>
                             <input type="text" class="form-control" id="inputNombre" placeholder="Ingresar nombre">
                         </div>
-                        <div class="form-group">
-                            <label for="inputApellido">Apellido</label>
+                        <div class="form-group" style="margin-top:20px;">
+                            <label for="inputApellido">Apellidos</label>
                             <input type="text" class="form-control" id="inputApellido" placeholder="ingresar apellido">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" style="margin-top:20px;">
                             <label for="exampleInputEmail1">Correo electronico</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">Este correo no se compartira con nadie fuera de la organizacion.</small>
                         </div>
-                        <div class="necesidades">
+                        <div class="necesidades" style="margin-top:20px;">
                             <label for="inputayudas">Ayudas Necesarias</label>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="option1">
-                                <label class="form-check-label">economicas</label>
+                                <label class="form-check-label">Economicas</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="option2">
-                                <label class="form-check-label">viveres</label>
+                                <label class="form-check-label">Viveres</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="option3">
-                                <label class="form-check-label">transporte</label>
+                                <label class="form-check-label">Transporte</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="option4">
-                                <label class="form-check-label">hospedaje</label>
+                                <label class="form-check-label">Hospedaje</label>
                             </div>
                         </div>
                     </div>
@@ -88,45 +88,43 @@
 
                     <div class="forms2">
                         <div class="form-group">
-                            <label for="inputNombre">apellido familiar</label>
+                            <label for="inputNombre">Apellido familiar</label>
                             <input type="text" class="form-control" id="inputApellidofam" placeholder="Ingresar apellido familiar">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" style="margin-top:20px;">
                             <label for="inputNumero">Numero de integrantes</label>
-                            <input type="number" class="form-control" id="inputNumeroINT" placeholder="Enter número">
+                            <input type="number" class="form-control" id="inputNumeroINT" placeholder="Ingresar cantidad de integrantes" >
                         </div>
-
-                        <div class="nin">
-                            <div class="numero form-group">
-                                <label for="inputNumero">Numero de niños(0-12)</label>
-                                <input type="number" class="form-control" id="inputninos" placeholder="Enter número">
+                   
+                        <div class="nin" style="margin-top:20px;">
+                            <div class="numero form-group" style="text-align:center;">
+                                <label for="inputNumero">Niños(0-12)</label>
+                                <input type="number" class="form-control" id="inputninos">
                             </div>
-                            <div class="numero form-group">
-                                <label for="inputNumero">Numero de adolecentes(13-17)</label>
-                                <input type="number" class="form-control" id="inputadolentes" placeholder="Enter número">
+                            <div class="numero form-group" style="text-align:center;">
+                                <label for="inputNumero">Adolecentes(13-17)</label>
+                                <input type="number" class="form-control" id="inputadolentes">
                             </div>
-                            <div class="numero form-group">
-                                <label for="inputNumero">Numero de adultos(+18)</label>
-                                <input type="number" class="form-control" id="inputAdultos" placeholder="Enter número">
+                            <div class="numero form-group" style="text-align:center;">
+                                <label for="inputNumero" >Adultos(+18)</label>
+                                <input type="number" class="form-control" id="inputAdultos">
                             </div>
                         </div>
-                        <label for="inputNumero">ubicacion</label>
                         <div class="form-row">
-                            <div class="form-group">
-                                <label for="inputCity">provincia</label>
-                                <input type="text" class="form-control" id="inputprovincia">
+                            <div class="form-group" style="margin-top:20px;">
+                                <label for="inputCity">Provincia</label>
+                                <input type="text" class="form-control" id="inputprovincia" placeholder="Ingrese su provincia">
                             </div>
-                            <div class="form-group">
-                                <label for="inputCity">canton</label>
-                                <input type="text" class="form-control" id="inputCanton">
+                            <div class="form-group" style="margin-top:20px;">
+                                <label for="inputCity">Canton</label>
+                                <input type="text" class="form-control" id="inputCanton" placeholder="Ingrese su canton">
                             </div>
-
                         </div>
-                        <div class="form-group">
-                            <label for="inputState">destino</label>
+                        <div class="form-group" style="margin-top:20px;">
+                            <label for="inputState">Destino</label>
                             <select id="inputState" class="form-control">
-                                <option selected value="panama">frontera Panama</option>
-                                <option value="nicaragua">frontera Nicaragua</option>
+                                <option selected value="panama">Frontera Panama</option>
+                                <option value="nicaragua">Frontera Nicaragua</option>
                                 <option value="Otros">Quedarse a vivir aqui</option>
                             </select>
                         </div>
