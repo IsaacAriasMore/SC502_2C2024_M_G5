@@ -14,22 +14,22 @@
   include 'plantilla.php';
   ?>
 
-  <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: right;  width: 380px; height: 923px; text-align: center;
+  <aside class="de" style="margin-top: 0px; background-color: #04282c; float: right;  width: 380px; height: 923px; text-align: center;
     align-items: center;">
     <br>
-    <h1 class="titulo1" style="margin-top: 30px">REQUISITOS</h1>
-    <p class="info3" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <h1 class="titulo2" style="margin-top: 30px">REQUISITOS</h1>
+    <p class="info5" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
       Facilidad de transporte
     </p>
-    <p class="info1" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <p class="info6" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
       Tiempo libre</p>
-      <p class="info2" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+      <p class="info7" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
      Documentación
     </p>
-    <p class="info2" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <p class="info8" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
     Amabilidad
     </p>
-    <p class="info2" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <p class="info8" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
     Compromiso
     </p>
     <br>
