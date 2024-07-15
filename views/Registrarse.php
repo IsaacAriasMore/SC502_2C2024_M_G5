@@ -9,10 +9,6 @@
 </head>
 <body>
 
-<?php 
-$contenido = 'Registrarse_form.php';
-include 'plantilla.php'; 
-?>
 
 <div class="contenido">
     <div class="container">
@@ -34,9 +30,9 @@ include 'plantilla.php';
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required><br><br>
 
-            <input type="submit" value="Registrarse">
+            <button type="button" class="boton btn btn-success" value="Registrarse">Registrarse</button>
         </form>
-        <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión aquí</a>.</p>
+        <p>¿Ya tienes una cuenta? <a href="./Iniciar_Sesion.php">Inicia sesión aquí</a>.</p>
     </div>
 </div>
 </body>

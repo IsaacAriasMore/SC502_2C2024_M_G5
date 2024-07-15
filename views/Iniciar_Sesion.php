@@ -9,30 +9,26 @@
 </head>
 <body>
 
-<?php
-$contenido = 'Iniciar_Sesion_form.php';
- include 'plantilla.php';
- ?>
-
 <div class="contenido">
     <div class="container">
         <h2>Iniciar sesión</h2>
-        <form action="login_process.php" method="post" class="form-centered">
-            <!-- Formulario de inicio de sesión -->
+        <form method="post" class="form-centered" id="loginForm">
+           
             <label for="correo">Correo electrónico:</label>
             <input type="email" id="correo" name="correo" required><br><br>
 
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required><br><br>
 
-            <input type="submit" value="Iniciar sesión">
+            <button type="buttom" class="boton btn btn-success" value="Iniciar_sesión" onclick="window.location.href = './index.php';">Iniciar sesión</button>
         </form>
-        <p>¿No tienes cuenta? <a href="signup.php">Regístrate aquí</a>.</p>
+        <p>¿No tienes cuenta? <a href="./Registrarse.php">Regístrate aquí</a>.</p>
     </div>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script> <!--/*Para futuro apartado de comentarios*/-->
 <script src="https://unpkg.com/scrollreveal"></script>
-<script src="./assets/js/index.js"></script>
+<script src="./assets/js/iniciar_Sesion.js"></script>
 </html>
