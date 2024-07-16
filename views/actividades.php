@@ -17,6 +17,7 @@
                     <img src="https://www.recogemostususados.com/images/servicios/recogida-de-ropa.jpg" class="card-img-top" alt="Imagen actividad">
                     <div class="card-body">
                         <h5 class="card-title">Recolección de prendas</h5>
+                        <p class="card-text">Sábado 27 de julio</p>
                         <p class="card-text">Universidad Fidelitas de Costa Rica, San Pedro</p>
                         <p class="card-text">Teléfono: +506 8888-8888</p>
                         <p class="card-text">Correo electrónico: inmigra@gmail.com</p>
@@ -32,6 +33,7 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1y4LSY25WuwLUrk38XhwbaDDppr8XsKFhFg&s" class="card-img-top" alt="Imagen actividad">
                     <div class="card-body">
                         <h5 class="card-title">Recolección de víveres no perecederos</h5>
+                        <p class="card-text">Sábado 10 de agosto</p>
                         <p class="card-text">Universidad Fidelitas de Costa Rica, San Pedro</p>
                         <p class="card-text">Teléfono: +506 8888-8888</p>
                         <p class="card-text">Correo electrónico: inmigra@gmail.com</p>
@@ -47,6 +49,7 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60W_-46cf_mNiRJ25M4p-xuUy8SfkUKMMSA&s" class="card-img-top" alt="Imagen actividad">
                     <div class="card-body">
                         <h5 class="card-title">Comedor público</h5>
+                        <p class="card-text">Sábado 31 de agosto</p>
                         <p class="card-text">Universidad Fidelitas de Costa Rica, San Pedro</p>
                         <p class="card-text">Teléfono: +506 8888-8888</p>
                         <p class="card-text">Correo electrónico: inmigra@gmail.com</p>
