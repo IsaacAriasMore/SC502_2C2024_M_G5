@@ -60,3 +60,23 @@ document.getElementById('solicitarBtn').addEventListener('click', function() {
     });
   }
 });
+
+sr.reveal('.imgin', {
+  duration: 3500,
+});
+sr.reveal('.informacion', {
+  duration: 3500,
+  reset: true
+});
+
+sr.reveal('.ayudas', {
+  delay:1000,
+  duration: 3500,
+  origin: 'bottom',
+    distance:'40px',
+  reset: true
+});
+
+
+
+

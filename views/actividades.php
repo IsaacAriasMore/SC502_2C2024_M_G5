@@ -107,14 +107,14 @@
                     <div class="card">
                         <img src="https://png.pngtree.com/background/20220728/original/pngtree-soccer-football-championship-vector-background-with-sports-ball-and-goals-picture-image_1848497.jpg" class="card-img-top" alt="Imagen actividad">
                         <div class="card-body">
-                            <h5 class="card-title">Recolección de víveres no perecederos</h5>
+                            <h5 class="card-title">Campeonato futbolero</h5>
                             <p class="card-text">domingo 8 de septiembre</p>
-                            <p class="card-text">Universidad Fidelitas de Costa Rica, San Pedro</p>
+                            <p class="card-text">plaza Jose Maria Zeledon</p>
                             <p class="card-text">Teléfono: +506 8888-8888</p>
                             <p class="card-text">Correo electrónico: inmigra@gmail.com</p>
                         </div>
                         <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d744.6308668749604!2d-84.04141672938339!3d9.91852756245996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3dc248f0349%3A0xb39c8908379bdaf1!2sPlaza%20de%20Jose%20Mar%C3%ADa%20Zeled%C3%B3n%20(AD%20Asturias)!5e0!3m2!1ses!2scr!4v1721163221299!5m2!1ses!2scr" width="100" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d744.6308668749604!2d-84.04141672938339!3d9.91852756245996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3dc248f0349%3A0xb39c8908379bdaf1!2sPlaza%20de%20Jose%20Mar%C3%ADa%20Zeled%C3%B3n%20(AD%20Asturias)!5e0!3m2!1ses!2scr!4v1721163221299!5m2!1ses!2scr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -133,10 +133,11 @@
     <footer>
         <?php include 'plantillafooter.php'; ?>
     </footer>
-
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/actividades.js"></script>
 </body>
 
 </html>
