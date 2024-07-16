@@ -18,18 +18,18 @@
     align-items: center;">
     <br>
     <h1 class="titulo2" style="margin-top: 30px">REQUISITOS</h1>
-    <p class="info5" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <p class="info5" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center; color: aliceblue;">
       Facilidad de transporte
     </p>
-    <p class="info6" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <p class="info6" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center; color: aliceblue;">
       Tiempo libre</p>
-      <p class="info7" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+      <p class="info7" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center; color: aliceblue;">
      Documentación
     </p>
-    <p class="info8" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <p class="info8" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center; color: aliceblue;">
     Amabilidad
     </p>
-    <p class="info8" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <p class="info8" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center; color: aliceblue;">
     Compromiso
     </p>
     <br>

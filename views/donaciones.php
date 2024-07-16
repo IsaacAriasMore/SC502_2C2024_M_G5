@@ -14,19 +14,19 @@
   include 'plantilla.php';
   ?>
 
-  <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left;  width: 380px; height: 1000px; text-align: center;
+  <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left;  width: 380px; height: 1600px; text-align: center;
     align-items: center;">
     <br>
     <h1 class="titulo1" style="margin-top: 30px">DONACIONES PERMITIDAS</h1>
-    <p class="info1" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center;">
+    <p class="info1" style=" font-size: 30px; font-style: italic; margin-top: 40px; text-align: center; color: aliceblue;">
       Economicas</p>
-    <p class="info2" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
+    <p class="info2"style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center; color: aliceblue;">
       Canasta de viveres
     </p>
-    <p class="info3" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
+    <p class="info3" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center; color: aliceblue;">
       Transporte
     </p>
-    <p class="info4" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center;">
+    <p class="info4" style=" font-size: 30px; font-style: italic; margin-top: 20px; text-align: center; color: aliceblue;">
       Hospedaje
     </p>
     <br>
@@ -35,8 +35,15 @@
    
   </aside>
 
-
   <section id="myForm" style="margin-top: 100px;">
+    <br>
+  <H1 class="text-center" style="text-align: center; text-shadow: 1px 1px 1px grey;">Como realizar la donacion</H1>
+  <p style="text-align:center; width:900px; margin-left: 640px;">Para comenzar debes de ingresar todos los datos que son solicitados en el formulario, es necesario que rellenes  
+                    todos los espacios para que se enviee correctamente el formulario, en el apartado de donacion debes escoger que  
+                    tipo de donacion deseeas realizar, adjuntamos el precio respectivo a cada donacion pero si deseeas puedes 
+                    seleccionar la opcion de otros y dijitar la cantidad que estes dispuesto o dispuesta a donar</p>
+
+    <br>
     <br>
     <H1 class="text-center" style="text-align: center; text-shadow: 4px 2px 3px grey;">DONACION</H1>
     <div class="Formulario" style="align-content: center">
