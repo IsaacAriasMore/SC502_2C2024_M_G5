@@ -22,7 +22,7 @@
           <a class="nav-link active" aria-current="page" href="./index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./donaciones.php">Apoyo/Donaciones</a>
+          <a class="nav-link" href="./donaciones.php">Donaciones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./actividades.php">Actividades</a>

@@ -22,16 +22,16 @@
           <a class="nav-link active" aria-current="page" href="./index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./donaciones.php">Apoyo/Donaciones</a>
+          <a class="nav-link" href="./ADMdonaciones.php">Donaciones</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./actividades.php">Actividades</a>
+          <a class="nav-link" href="./ADMactividades.php">Actividades</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./solicitud.php">Solicitud Ayudas</a>
+          <a class="nav-link" href="./ADMsolicitud.php">Solicitud Ayudas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./voluntarios.php">Quiero ser Voluntario</a>
+          <a class="nav-link" href="./ADMvoluntarios.php">Quiero ser Voluntario</a>
         </li>
         <li class="login nav-item d-flex" style="margin-left: 30px;">
             <a href="./Iniciar_Sesion.php">
