@@ -37,12 +37,14 @@
 
   <section id="myForm" style="margin-top: 100px;">
     <br>
+   
   <H1 class="text-center" style="text-align: center; text-shadow: 1px 1px 1px grey;">Como realizar la donacion</H1>
+  <div class="text2" style="text-align:center; width:900px;">
   <p style="text-align:center; width:900px; margin-left: 640px;">Para comenzar debes de ingresar todos los datos que son solicitados en el formulario, es necesario que rellenes  
                     todos los espacios para que se enviee correctamente el formulario, en el apartado de donacion debes escoger que  
                     tipo de donacion deseeas realizar, adjuntamos el precio respectivo a cada donacion pero si deseeas puedes 
                     seleccionar la opcion de otros y dijitar la cantidad que estes dispuesto o dispuesta a donar</p>
-
+                    </div>
     <br>
     <br>
     <H1 class="text-center" style="text-align: center; text-shadow: 4px 2px 3px grey;">DONACION</H1>

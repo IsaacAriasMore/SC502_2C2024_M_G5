@@ -17,12 +17,12 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-4 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="./index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./donaciones.php">Apoyo/Donaciones</a>
+          <a class="nav-link" href="./donaciones.php">Donaciones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./actividades.php">Actividades</a>
@@ -30,6 +30,15 @@
         <li class="nav-item">
           <a class="nav-link" href="./solicitud.php">Solicitud Ayudas</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./voluntarios.php">Quiero ser Voluntario</a>
+        </li>
+        <li class="login nav-item d-flex" style="margin-left: 30px;">
+            <a href="./Iniciar_Sesion.php">
+              <img src="./assets/img/iniciar-sesion.png" class="nav-link" style="height: 55px; width: 55px;" alt="Logo">
+            </a>
+          </li>
+
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="bus">

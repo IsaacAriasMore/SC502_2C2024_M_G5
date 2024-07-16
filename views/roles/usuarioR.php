@@ -22,7 +22,7 @@
           <a class="nav-link active" aria-current="page" href="./index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./donaciones.php">Apoyo/Donaciones</a>
+          <a class="nav-link" href="./donaciones.php">Donaciones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./actividades.php">Actividades</a>
@@ -30,7 +30,16 @@
         <li class="nav-item">
           <a class="nav-link" href="./solicitud.php">Solicitud Ayudas</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./voluntarios.php">Quiero ser Voluntario</a>
+        </li>
+        <li class="login nav-item d-flex" style="margin-left: 30px;">
+            <a href="./Iniciar_Sesion.php">
+              <img src="./assets/img/usuario.png" class="nav-link" style="height: 50px; width: 50px" alt="Logo">
+            </a>
+          </li>
       </ul>
+
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="bus">
         <button class="btn btn-outline-success" id="btn" onclick="return buscador();">Search</button>

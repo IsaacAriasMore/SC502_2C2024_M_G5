@@ -28,35 +28,6 @@ sr.reveal('.titulo2', {
     reset: true
 });
 
-sr.reveal('.info1', {
-    delay: 2000,
-    duration: 3500,
-    origin: 'left',
-    distance: '100px',
-    reset: true
-});
-sr.reveal('.info2', {
-    delay: 2200,
-    duration: 3500,
-    origin: 'left',
-    distance: '100px',
-    reset: true
-});
-sr.reveal('.info3', {
-    delay: 2400,
-    duration: 3500,
-    origin: 'left',
-    distance: '100px',
-    reset: true
-});
-sr.reveal('.info4', {
-    delay: 2600,
-    duration: 3500,
-    origin: 'left',
-    distance: '100px',
-    reset: true
-});
-/**/
 sr.reveal('.info5', {
     delay: 2000,
     duration: 3500,
