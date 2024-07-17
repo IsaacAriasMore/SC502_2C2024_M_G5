@@ -59,9 +59,9 @@
                         </div>
 
                         <div class="form-group" style="margin-top:20px;">
-                            <label for="exampleInputEmail1">Correo electronico</label>
+                            <label for="exampleInputEmail1">Telefono electronico</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">Este correo no se compartira con nadie fuera de la organizacion.</small>
+                            <small id="emailHelp" class="form-text text-muted">Este Telefono no se compartira con nadie fuera de la organizacion.</small>
                         </div>
                         <div class="necesidades" style="margin-top:20px;">
                             <label for="inputayudas">Ayudas Necesarias</label>

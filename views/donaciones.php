@@ -38,7 +38,8 @@
   <section id="myForm" style="margin-top: 100px;">
     <br>
   <H1 class="text-center" style="text-align: center; text-shadow: 1px 1px 1px grey;">Como realizar la donacion</H1>
-  <p style="text-align:center; width:900px; margin-left: 640px;">Para comenzar debes de ingresar todos los datos que son solicitados en el formulario, es necesario que rellenes  
+  <div class="text2" style="text-align:center; width:50%; margin-left: 630px;">
+  <p>Para comenzar debes de ingresar todos los datos que son solicitados en el formulario, es necesario que rellenes  
                     todos los espacios para que se enviee correctamente el formulario, en el apartado de donacion debes escoger que  
                     tipo de donacion deseeas realizar, adjuntamos el precio respectivo a cada donacion pero si deseeas puedes 
                     seleccionar la opcion de otros y dijitar la cantidad que estes dispuesto o dispuesta a donar</p>
@@ -49,19 +50,19 @@
     <div class="Formulario" style="align-content: center">
       <form id="miFormulario" action="./resibe.html" style="margin-top: 30px;">
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+          <label for="nombre" class="form-label">Nombre</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="Nombre Completo">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+          <label for="apellido" class="form-label">Apellidos</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="Apellidos Completos">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+          <label for="telefono" class="form-label">Teléfono</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" name="Telefono" placeholder="XXXX-XXXX">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Correo</label>
+          <label for="correo" class="form-label">Correo</label>
           <input type="email" class="form-control" id="exampleFormControlInput1" name="Correo" placeholder="ejemplo1@gmail.com">
         </div>
         <div class="mb-3">

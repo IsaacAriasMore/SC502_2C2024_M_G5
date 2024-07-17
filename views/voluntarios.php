@@ -14,7 +14,7 @@
   include 'plantilla.php';
   ?>
 
-  <aside class="de" style="margin-top: 0px; background-color: #04282c; float: right;  width: 380px; height: 923px; text-align: center;
+  <aside class="de" style="margin-top: 0px; background-color: #04282c; float: left;  width: 380px; height: 923px; text-align: center;
     align-items: center;">
     <br>
     <h1 class="titulo2" style="margin-top: 30px">REQUISITOS</h1>
