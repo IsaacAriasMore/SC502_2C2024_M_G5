@@ -26,29 +26,6 @@ fieldset {
   border: none;
 }
 
-
-<<<<<<< HEAD
-.iniciov{
-margin: 0 auto;
-
-width: 50%;
-height: 30%;
-background-color: white;
-border-radius: 20px;
-box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
-=======
-.iniciov {
-  margin: 0 auto;
-  text-align: center;
-  width: 60%;
-  height: 60%;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 0 20px 10px rgba(0, 43, 1, 0.5);
->>>>>>> 9162674fe86fc1840118501cbe406632d6200cfd
-
-}
-
 .inicio {
   display: flex;
   margin-top: 60px;

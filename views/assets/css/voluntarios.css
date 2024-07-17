@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body{
     margin: 0;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,0.08167016806722693) 100%);
@@ -156,25 +155,3 @@ body{
       max-width: 1000px;
     }
   }
-=======
-section{
-text-align: center;
-align-items: center;
-justify-content: center;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
-.form input{
-    width: 300px;
-}
-.form textarea{
-    width: 500px;
-}
-aside{
-    color: white;
-}
->>>>>>> 9162674fe86fc1840118501cbe406632d6200cfd
