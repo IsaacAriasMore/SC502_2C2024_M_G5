@@ -107,17 +107,6 @@ document.getElementById('btn-submit').addEventListener('click', function() {
 
 function updateTotal() {
   const donacion = document.getElementById('donacion').value;
-  const otherAmountContainer = document.getElementById('otherAmountContainer');
-  const otherAmount = document.getElementById('otherAmount').value;
-  let total = 0;
-
-  if (donacion === 'otros') {
-    otherAmountContainer.style.display = 'block';
-    total = parseFloat(otherAmount) || 0;
-  } else {
-    otherAmountContainer.style.display = 'none';
-    total = parseFloat(donacion);
-
   const totalAmount = document.getElementById('totalAmount');
 
   if (donacion === 'otros') {
@@ -125,11 +114,8 @@ function updateTotal() {
       totalAmount.placeholder = 'Ingrese el monto deseado';
   } else {
       totalAmount.value = parseFloat(donacion);
-      totalAmount.placeholder = '';
-  }
-}
-
-  document.getElementById('totalAmount').value = total;
+      totalAmount.placeholder = '';
+  }
 }
 
 function updatePaymentMethod() {

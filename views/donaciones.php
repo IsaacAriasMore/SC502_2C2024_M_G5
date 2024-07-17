@@ -77,7 +77,7 @@
             </div>
             <div class="mb-3">
               <label for="totalAmount" class="form-label">Total a donar</label>
-              <input type="text" class="form-control" id="totalAmount" readonly>
+              <input type="text" class="form-control" id="totalAmount">
             </div>
             <label for="metodoPago" class="form-label">Método de Pago</label>
             <select class="form-select" id="metodoPago" onchange="updatePaymentMethod()">
