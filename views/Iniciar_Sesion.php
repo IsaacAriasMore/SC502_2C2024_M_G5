@@ -14,10 +14,10 @@
         <h2>Iniciar sesión</h2>
         <form method="post" class="form-centered" id="loginForm">
            
-            <label for="correo">Correo electrónico:</label>
+            <label for="correo">Correo electrónico</label>
             <input type="email" id="correo" name="correo" required><br><br>
 
-            <label for="contrasena">Contraseña:</label>
+            <label for="contrasena">Contraseña</label>
             <input type="password" id="contrasena" name="contrasena" required><br><br>
 
             <button type="buttom" class="boton btn btn-success" value="Iniciar_sesión" onclick="window.location.href = './index.php';">Iniciar sesión</button>
