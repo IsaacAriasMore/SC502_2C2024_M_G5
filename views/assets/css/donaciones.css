@@ -1,13 +1,21 @@
-body{
+body {
   margin: 0;
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,0.08167016806722693) 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 212, 255, 0.08167016806722693) 100%);
 }
-img{
+
+img {
   border-radius: 10px;
 }
-h1.titulo1,.titulo2{
+
+img {
+  object-fit: cover;
+}
+
+h1.titulo1,
+.titulo2 {
   color: aliceblue;
 }
+
 legend {
   font-size: 1.4em;
   margin-bottom: 10px;
@@ -18,10 +26,8 @@ fieldset {
   border: none;
 }
 
-aside{
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
-}
 
+<<<<<<< HEAD
 .iniciov{
 margin: 0 auto;
 
@@ -30,9 +36,20 @@ height: 30%;
 background-color: white;
 border-radius: 20px;
 box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
+=======
+.iniciov {
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 10px rgba(0, 43, 1, 0.5);
+>>>>>>> 9162674fe86fc1840118501cbe406632d6200cfd
 
 }
-.inicio{
+
+.inicio {
   display: flex;
   margin-top: 60px;
 }
@@ -46,16 +63,20 @@ box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
   margin-top: 10px;
 }
 
-.inicio input, select{
+.inicio input,
+select {
   margin-top: 5px;
   padding: 10px;
   font-size: 16px;
 }
 
 .iniciov button {
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #4CAF50; /* Color del botón */
+  background-color: #4CAF50;
+  /* Color del botón */
   color: white;
   border: none;
   border-radius: 5px;
@@ -63,7 +84,8 @@ box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
 }
 
 .iniciov button:hover {
-  background-color: #45a049; /* Color del botón al pasar el ratón */
+  background-color: #45a049;
+  /* Color del botón al pasar el ratón */
 }
 
 .inicio input[type="text"],
@@ -71,9 +93,8 @@ box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
 .inicio input[type="number"],
 .inicio input[type="tel"],
 .inicio select[id="donacion"],
-.inicio select[id="metodoPago"]
-{
-  background: rgba(255,255,255,0.1);
+.inicio select[id="metodoPago"] {
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   font-size: 16px;
   height: auto;
@@ -83,31 +104,39 @@ box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
   width: 100%;
   background-color: #e8eeef;
   color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin-bottom: 30px;
 }
 
-.forms1{
-  padding: 20px; 
+.forms1 {
+  padding: 20px;
   margin-left: 2%;
 }
-.forms1 input{
+
+.forms1 input {
   border-radius: 5px;
   margin-left: 15%;
 }
-.forms2 select{
+
+.forms2 select {
   margin-left: 15%;
 }
 
-.forms2{
-  padding: 20px; 
+.forms2 {
+  padding: 20px;
   margin-left: 2%;
 }
-.forms2 input{
+
+.forms2 input {
   margin-left: 15%;
 }
 
-.forms1, .forms2 {
+.forms2 label {
+  margin-top: -5%;
+}
+
+.forms1,
+.forms2 {
   width: 45%;
 }
 
@@ -121,6 +150,7 @@ box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
   font-size: 1em;
   /* Reduce el tamaño de la fuente para hacer el texto más pequeño */
 }
+
 .number {
   background-color: #5fcf80;
   color: #fff;
@@ -131,9 +161,10 @@ box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
   margin-right: 8px;
   line-height: 30px;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
   border-radius: 100%;
 }
+
 .number1 {
   background-color: #5fcf80;
   color: #fff;
@@ -144,7 +175,7 @@ box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
   margin-right: 8px;
   line-height: 30px;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
   border-radius: 100%;
 }
 

@@ -39,6 +39,7 @@
   <h1>Donaciones</h1>
   <div class="iniciov" style="margin-top:90px; align-content:center;">
     <br>
+<<<<<<< HEAD
     <h1 class="text-center" style="text-align: center; text-shadow: 1px 1px 1px grey;">Como realizar la inscripcion</h1>
     <div class="text2" style="text-align:center; width:70%;">
       <br>
@@ -74,6 +75,37 @@
 
           </fieldset>
         </form>
+=======
+    <H1 class="text-center" style="text-align: center;">Inscripción</H1>
+    <div class="Formulario" style="align-content: center">
+      <form class="form" id="miFormulario" action="./resibe.html" style="margin-top: 30px;">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label" style="text-align: center; ">Nombre</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="Nombre Completo">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"style="text-align: center; ">Apellidos</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="Apellidos Completos">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"style="text-align: center; ">Telefono</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="XXXX-XXXX">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"style="text-align: center; ">Correo</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="ejemplo1@gmail.com">
+        </div>
+    
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"style="text-align: center;">¿Como deseas ayudar?</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;"> </textarea>
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+          <button type="button" id="btn-submit" class="btn btn-outline-success btn-lg">ENVIAR</button>
+        </div>
+      </form>
+>>>>>>> 9162674fe86fc1840118501cbe406632d6200cfd
       </div>
       <div class="forms2">
         <form action="./ADMdonaciones.php" method="post">
