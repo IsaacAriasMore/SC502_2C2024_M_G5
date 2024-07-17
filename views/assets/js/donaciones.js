@@ -86,7 +86,7 @@ sr.reveal('.info8', {
     reset: true
 });
 
-/* */
+
 
 sr.reveal('.img', {
     delay: 3000,
@@ -94,15 +94,6 @@ sr.reveal('.img', {
     origin: 'bottom',
     distance: '100px',
     reset: true
-});
-
-document.getElementById('btn-submit').addEventListener('click', function() {
-  document.querySelectorAll('.form-control').forEach(input => input.value = '');
-  document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-  Swal.fire({
-    icon: "success",
-    title: "Información enviada, gracias por contar con nosotros"
-  });
 });
 
 function updateTotal() {
@@ -138,6 +129,6 @@ function updatePaymentMethod() {
   document.getElementById('btn-submit').addEventListener('click', function() {
     Swal.fire({
       icon: "success",
-      title: "donacion realizada"
+      title: "Donacion realizada"
     });
 });

@@ -36,6 +36,7 @@
     <img class="img" src="assets/img/foto2refug.jpg" style="width: 250px; height: 180px;">
     <br>
   </aside>
+
   <h1>Donaciones</h1>
   <div class="iniciov" style="margin-top:90px; align-content:center;">
     <br>
@@ -108,16 +109,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script>
-    document.getElementById('btn-submit').addEventListener('click', function() {
-      document.querySelectorAll('.form-control').forEach(input => input.value = '');
-      document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-      Swal.fire({
-        icon: "success",
-        title: "Información enviada, gracias por contar con nosotros"
-      });
-    });
-  </script>
+  
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>

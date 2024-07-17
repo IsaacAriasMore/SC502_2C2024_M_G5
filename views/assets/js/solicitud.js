@@ -1,9 +1,9 @@
 
-/*------------------------------------------------------------*/
+
 document.getElementById('solicitarBtn').addEventListener('click', function() {
 
 
-  // Lista de IDs de los campos que tienen que estar llenos
+  // ids de los campos que tienen que estar llenos
   const camposObligatorios = [
       'inputNombre', 'inputApellido', 'exampleInputEmail1', 
       'inputNumeroINT','inputApellidofam','inputninos','inputadolentes','inputAdultos',
@@ -16,7 +16,7 @@ document.getElementById('solicitarBtn').addEventListener('click', function() {
 
 
 
-  // Verificar que todos los campos esten llenos
+  // verificar que todos los campos esten llenos
   for (let id of camposObligatorios) {
       const campo = document.getElementById(id);
       if (!campo.value.trim()) {
@@ -27,7 +27,7 @@ document.getElementById('solicitarBtn').addEventListener('click', function() {
 
 
 
-  // Verificar si al menos una opción de ayuda está seleccionada
+  // verificar si al menos una opción de ayuda está seleccionada
   const opcionesAyuda = document.querySelectorAll('input[type="checkbox"][value^="option"]');
   let ayudaSeleccionada = false;
   for (let opcion of opcionesAyuda) {
@@ -39,10 +39,8 @@ document.getElementById('solicitarBtn').addEventListener('click', function() {
 
 
 
-  // Verificar si los términos y condiciones esta marcado
+  // verificar si los términos y condiciones esta marcado
   const terminosAceptados = document.getElementById('defaultCheck1').checked;
-
-  
 
   if (todosCamposLlenos && ayudaSeleccionada && terminosAceptados) {
     document.getElementById('solicitarBtn').addEventListener('click', function () {
