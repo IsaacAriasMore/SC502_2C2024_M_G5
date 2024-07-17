@@ -107,7 +107,6 @@ document.getElementById('btn-submit').addEventListener('click', function() {
 
 function updateTotal() {
   const donacion = document.getElementById('donacion').value;
-<<<<<<< HEAD
   const otherAmountContainer = document.getElementById('otherAmountContainer');
   const otherAmount = document.getElementById('otherAmount').value;
   let total = 0;
@@ -118,7 +117,7 @@ function updateTotal() {
   } else {
     otherAmountContainer.style.display = 'none';
     total = parseFloat(donacion);
-=======
+
   const totalAmount = document.getElementById('totalAmount');
 
   if (donacion === 'otros') {
@@ -127,27 +126,11 @@ function updateTotal() {
   } else {
       totalAmount.value = parseFloat(donacion);
       totalAmount.placeholder = '';
->>>>>>> 9162674fe86fc1840118501cbe406632d6200cfd
   }
 }
 
-<<<<<<< HEAD
   document.getElementById('totalAmount').value = total;
 }
-=======
-  document.getElementById('btn-submit').addEventListener('click', function() {
-    document.querySelectorAll('.form-control').forEach(input => input.value = '');
-    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-    Swal.fire({
-      icon: "success",
-      title: "Donacion enviada, Muchas gracias por la ayuda"
-    });
-  });
-   function updatePaymentMethod() {
-    const metodoPago = document.getElementById('metodoPago').value;
-    const sinpeContainer = document.getElementById('sinpeContainer');
-    const tarjetaContainer = document.getElementById('tarjetaContainer');
->>>>>>> 9162674fe86fc1840118501cbe406632d6200cfd
 
 function updatePaymentMethod() {
   const metodoPago = document.getElementById('metodoPago').value;
