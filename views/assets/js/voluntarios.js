@@ -9,7 +9,7 @@ sr.reveal('.iz', {
 sr.reveal('.de', {
     delay: 500,
     duration: 3500,
-    origin: 'right',
+    origin: 'left',
     distance: '100px',
     reset: true
 });
@@ -23,7 +23,7 @@ sr.reveal('.titulo1', {
 sr.reveal('.titulo2', {
     delay: 1500,
     duration: 3500,
-    origin: 'right',
+    origin: 'left',
     distance: '100px',
     reset: true
 });
@@ -31,21 +31,21 @@ sr.reveal('.titulo2', {
 sr.reveal('.info5', {
     delay: 2000,
     duration: 3500,
-    origin: 'right',
+    origin: 'left',
     distance: '100px',
     reset: true
 });
 sr.reveal('.info6', {
     delay: 2200,
     duration: 3500,
-    origin: 'right',
+    origin: 'left',
     distance: '100px',
     reset: true
 });
 sr.reveal('.info7', {
     delay: 2400,
     duration: 3500,
-    origin: 'right',
+    origin: 'left',
     distance: '100px',
     reset: true
 });

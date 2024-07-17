@@ -96,47 +96,48 @@ sr.reveal('.img', {
     reset: true
 });
 
-function updateTotal() {
-    const donacion = document.getElementById('donacion').value;
-    const otherAmountContainer = document.getElementById('otherAmountContainer');
-    const otherAmount = document.getElementById('otherAmount').value;
-    let total = 0;
-
-    if (donacion === 'otros') {
-      otherAmountContainer.style.display = 'block';
-      total = parseFloat(otherAmount) || 0;
-    } else {
-      otherAmountContainer.style.display = 'none';
-      total = parseFloat(donacion);
-    }
-
-    document.getElementById('totalAmount').value = total;
-  }
-
-  document.getElementById('btn-submit').addEventListener('click', function() {
-    document.querySelectorAll('.form-control').forEach(input => input.value = '');
-    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-    Swal.fire({
-      icon: "success",
-      title: "Información enviada, gracias por contar con nosotros"
-    });
+document.getElementById('btn-submit').addEventListener('click', function() {
+  document.querySelectorAll('.form-control').forEach(input => input.value = '');
+  document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
+  Swal.fire({
+    icon: "success",
+    title: "Información enviada, gracias por contar con nosotros"
   });
-   function updatePaymentMethod() {
-    const metodoPago = document.getElementById('metodoPago').value;
-    const sinpeContainer = document.getElementById('sinpeContainer');
-    const tarjetaContainer = document.getElementById('tarjetaContainer');
+});
 
-    if (metodoPago === 'sinpe') {
-      sinpeContainer.style.display = 'block';
-      tarjetaContainer.style.display = 'none';
-    } else if (metodoPago === 'tarjeta') {
-      sinpeContainer.style.display = 'none';
-      tarjetaContainer.style.display = 'block';
-    } else {
-      sinpeContainer.style.display = 'none';
-      tarjetaContainer.style.display = 'none';
-    }
+function updateTotal() {
+  const donacion = document.getElementById('donacion').value;
+  const otherAmountContainer = document.getElementById('otherAmountContainer');
+  const otherAmount = document.getElementById('otherAmount').value;
+  let total = 0;
+
+  if (donacion === 'otros') {
+    otherAmountContainer.style.display = 'block';
+    total = parseFloat(otherAmount) || 0;
+  } else {
+    otherAmountContainer.style.display = 'none';
+    total = parseFloat(donacion);
   }
+
+  document.getElementById('totalAmount').value = total;
+}
+
+function updatePaymentMethod() {
+  const metodoPago = document.getElementById('metodoPago').value;
+  const sinpeContainer = document.getElementById('sinpeContainer');
+  const tarjetaContainer = document.getElementById('tarjetaContainer');
+
+  if (metodoPago === 'sinpe') {
+    sinpeContainer.style.display = 'block';
+    tarjetaContainer.style.display = 'none';
+  } else if (metodoPago === 'tarjeta') {
+    sinpeContainer.style.display = 'none';
+    tarjetaContainer.style.display = 'block';
+  } else {
+    sinpeContainer.style.display = 'none';
+    tarjetaContainer.style.display = 'none';
+  }
+}
 
   document.getElementById('btn-submit').addEventListener('click', function() {
     document.querySelectorAll('.form-control').forEach(input => input.value = '');

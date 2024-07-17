@@ -25,16 +25,16 @@ aside{
 .iniciov{
 margin: 0 auto;
 
-width: 60%;
-height: 60%;
+width: 50%;
+height: 30%;
 background-color: white;
 border-radius: 20px;
-box-shadow: 0 0 20px 10px rgba(0, 43, 1, 0.5);
+box-shadow: 0 0 20px 10px rgba(7, 67, 55, 0.675);
 
 }
 .inicio{
   display: flex;
-  margin-top: 15%;
+  margin-top: 60px;
 }
 
 .inicio form {
