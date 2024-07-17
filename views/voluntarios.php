@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/donaciones.css">
+  <link rel="stylesheet" href="./assets/css/voluntarios.css">
   <title>Apoyo/Donaciones1</title>
 </head>
 
@@ -42,29 +42,29 @@
 
   <section id="myForm" style="margin-top: 100px;">
     <br>
-    <H1 class="text-center" style="text-align: center; text-shadow: 4px 2px 3px grey;">Inscripción</H1>
+    <H1 class="text-center" style="text-align: center;">Inscripción</H1>
     <div class="Formulario" style="align-content: center">
-      <form id="miFormulario" action="./resibe.html" style="margin-top: 30px;">
+      <form class="form" id="miFormulario" action="./resibe.html" style="margin-top: 30px;">
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+          <label for="exampleFormControlInput1" class="form-label" style="text-align: center; ">Nombre</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="Nombre Completo">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+          <label for="exampleFormControlInput1" class="form-label"style="text-align: center; ">Apellidos</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="Apellidos Completos">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+          <label for="exampleFormControlInput1" class="form-label"style="text-align: center; ">Telefono</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="XXXX-XXXX">
         </div>
 
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Correo</label>
+          <label for="exampleFormControlInput1" class="form-label"style="text-align: center; ">Correo</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" name="Nombre" placeholder="ejemplo1@gmail.com">
         </div>
     
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">¿Como deseas ayudar?</label>
+          <label for="exampleFormControlTextarea1" class="form-label"style="text-align: center;">¿Como deseas ayudar?</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;"> </textarea>
         </div>
         <div class="mb-3 d-flex justify-content-center">

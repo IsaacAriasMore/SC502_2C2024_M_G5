@@ -97,28 +97,24 @@ sr.reveal('.img', {
 });
 
 function updateTotal() {
-    const donacion = document.getElementById('donacion').value;
-    const otherAmountContainer = document.getElementById('otherAmountContainer');
-    const otherAmount = document.getElementById('otherAmount').value;
-    let total = 0;
+  const donacion = document.getElementById('donacion').value;
+  const totalAmount = document.getElementById('totalAmount');
 
-    if (donacion === 'otros') {
-      otherAmountContainer.style.display = 'block';
-      total = parseFloat(otherAmount) || 0;
-    } else {
-      otherAmountContainer.style.display = 'none';
-      total = parseFloat(donacion);
-    }
-
-    document.getElementById('totalAmount').value = total;
+  if (donacion === 'otros') {
+      totalAmount.value = '';
+      totalAmount.placeholder = 'Ingrese el monto deseado';
+  } else {
+      totalAmount.value = parseFloat(donacion);
+      totalAmount.placeholder = '';
   }
+}
 
   document.getElementById('btn-submit').addEventListener('click', function() {
     document.querySelectorAll('.form-control').forEach(input => input.value = '');
     document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
     Swal.fire({
       icon: "success",
-      title: "Información enviada, gracias por contar con nosotros"
+      title: "Donacion enviada, Muchas gracias por la ayuda"
     });
   });
    function updatePaymentMethod() {
@@ -139,11 +135,8 @@ function updateTotal() {
   }
 
   document.getElementById('btn-submit').addEventListener('click', function() {
-    document.querySelectorAll('.form-control').forEach(input => input.value = '');
-    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
     Swal.fire({
       icon: "success",
-      title: "Información enviada, gracias por contar con nosotros"
+      title: "donacion realizada"
     });
-  });
-
+});
