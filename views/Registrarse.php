@@ -13,7 +13,7 @@
 <div class="contenido">
     <div class="container">
         <h2>Registro</h2>
-        <form action="signup_process.php" method="post" class="form-centered">
+        <form action="signup_process.php" method="post" class="form-centered" id="registerForm">
             <!-- Formulario de registro -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required><br><br>
@@ -30,8 +30,9 @@
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required><br><br>
 
-            <button type="button" class="boton btn btn-success" value="Registrarse">Registrarse</button>
+            <button type="button" class="boton btn btn-success" value="Registrarse" form="registerForm">Registrarse</button>
         </form>
+        <div id="response" class="mt-3"></div>
         <p>¿Ya tienes una cuenta? <a href="./Iniciar_Sesion.php">Inicia sesión aquí</a>.</p>
     </div>
 </div>
@@ -39,5 +40,5 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script> <!--/*Para futuro apartado de comentarios*/-->
 <script src="https://unpkg.com/scrollreveal"></script>
-<script src="./assets/js/index.js"></script>
+<script src="./assets/js/registrarse.js"></script>
 </html>

@@ -1,23 +1,33 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm'); // Obtener el formulario por ID
 
-/*login roles*/
-const loginForm = document.getElementById('loginForm');//se agarra el id del formulario
+    loginForm.addEventListener('submit', function(event) { // Agregar un evento al enviar el formulario
+        event.preventDefault(); // Prevenir el envío del formulario por defecto
 
+        const email = document.getElementById('correo').value.trim();
+        const password = document.getElementById('contrasena').value.trim();
 
-loginForm.addEventListener('submit', function(event) { // aqui agregamos un evento para enviar el formulario
-    event.preventDefault(); // prevenir el envío del formulario por defecto
+        // Validar credenciales mediante AJAX
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'Iniciar_SesionController.php', true); // URL del controlador
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-   
-    const email = document.getElementById('correo').value.trim();
-    const password = document.getElementById('contrasena').value.trim();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
 
-    // validar credenciales simulación
-    if (email === 'jarias30680@ufide.ac.cr' && password === '12345678') {
-        sessionStorage.setItem('role', 'admin');
-        
-        
-    } else if(email === 'isaacarias053@gmail.com' && password === '12345678'){
-        sessionStorage.setItem('role', 'userR');
-    } else{
-        sessionStorage.setItem('role', 'userNR'); 
-    }
+                if (response.success) {
+                    // Guardar datos en sessionStorage
+                    sessionStorage.setItem('role', response.role);
+                    // Redirigir a la página principal
+                    window.location.href = './index.php';
+                } else {
+                    alert('Error en el inicio de sesión: ' + response.message);
+                }
+            }
+        };
+
+        // Enviar datos al controlador
+        xhr.send(`correo=${encodeURIComponent(correo)}&contrasena=${encodeURIComponent(contrasena)}`);
+    });
 });

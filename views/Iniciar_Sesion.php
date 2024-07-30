@@ -22,6 +22,7 @@
 
             <button type="buttom" class="boton btn btn-success" value="Iniciar_sesión" onclick="window.location.href = './index.php';">Iniciar sesión</button>
         </form>
+        <div id="response" class="mt-3"></div>
         <p>¿No tienes cuenta? <a href="./Registrarse.php">Regístrate aquí</a>.</p>
     </div>
 </div>

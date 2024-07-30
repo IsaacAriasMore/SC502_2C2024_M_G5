@@ -13,7 +13,7 @@
   <?php
   include 'plantilla.php';
   ?>
-
+<div id="response"></div>
   <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left; width: 380px; height: 1303px; text-align: center; align-items: center;">
     <br>
     <h1 class="titulo2" style="margin-top: 100px">REQUISITOS</h1>
@@ -51,45 +51,44 @@
     <legend style="text-align:center;"><span class="number" style="text-align:center;">1</span>Datos personales</legend>
     <div class="inicio">
       <div class="forms1">
-        <form action="./ADMdonaciones.php" method="post" style="align-content:center;">
+        <form id="formulario" method="post" style="align-content:center;">
           
           <fieldset>
             <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="user_nombre">
+            <label for="nombre_voluntario">Nombre:</label>
+            <input type="text" id="nombre_voluntario" name="nombre_voluntario">
           </div>
             <div>
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="user_apellidos">
+            <label for="apellido_voluntario">Apellidos:</label>
+            <input type="text" id="apellido_voluntario" name="apellido_voluntario">
             </div>
 
             <div>
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="user_email">
+            <label for="email_voluntario">Email:</label>
+            <input type="email" id="email_voluntario" name="email_voluntario">
             </div>
 
             <div>
-            <label for="tel">Telefono:</label>
-            <input type="tel" id="tel" name="user_tel">
+            <label for="telefono_voluntario">Telefono:</label>
+            <input type="number" id="telefono_voluntario" name="telefono_voluntario">
             </div>
-
           </fieldset>
         </form>
       </div>
       <div class="forms2">
-        <form action="./ADMdonaciones.php" method="post">
+        <form id="formulario2"  method="post">
           <fieldset>
             <div>
-            <label for="cedula">Cedula:</label>
-            <input type="text" id="apellidos" name="user_apellidos">
+            <label for="cedula_voluntario">Cedula:</label>
+            <input type="number" id="cedula_voluntario" name="cedula_voluntario">
             </div>
             <div>
-            <label for="apellidos">Luegar de residencia:</label>
-            <input type="text" id="apellidos" name="user_apellidos">
+            <label for="residencia_voluntario">Luegar de residencia:</label>
+            <input type="text" id="residencia_voluntario" name="residencia_voluntario">
             </div>
             <div>
-            <label for="apellidos">Como te definirias en una palabra?</label>
-            <input type="text" id="apellidos" name="user_apellidos">
+            <label for="definicion_voluntario">Como te definirias en una palabra?</label>
+            <input type="text" id="definicion_voluntario" name="definicion_voluntario">
             </div>
            
           </fieldset>
@@ -97,7 +96,7 @@
       </div>
     </div>
     <div class="boton mb-3 d-flex justify-content-center">
-      <button type="button" id="btn-submit" class="btn btn-outline-success btn-lg">ENVIAR</button>
+      <button type="submit" id="submit" class="btn btn-outline-success btn-lg" from="formulario">ENVIAR</button>
     </div>
     </div></div>
   <h3 style="margin-top:100px; margin-bottom: 50px; font-style: italic; text-align: center;">"Las pequeñas ayudas tienen grandes recompensas"</h3>
@@ -114,6 +113,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
   <script src="./assets/js/voluntarios.js"></script>
 </body>
 

@@ -66,12 +66,29 @@ sr.reveal('.img', {
     reset: true
 });
 
-  document.getElementById('btn-submit').addEventListener('click', function() {
-    document.querySelectorAll('.form-control').forEach(input => input.value = '');
-    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-    Swal.fire({
-      icon: "success",
-      title: "Información enviada, gracias por contar con nosotros"
-    });
-  });
 
+  $(document).ready(function () { 
+    $('#formulario').on('submit', function (e) { 
+        e.preventDefault(); 
+        var formData = new FormData($('#formulario')[0])
+        $.ajax({ 
+            url: '../controllers/VoluntariosController.php', 
+            type: 'POST', 
+            data: formData, 
+            contentType :  false,
+            processData  : false,
+            //generar un JSON con cada valor de cada campo del formulario 
+            success: function(response) { 
+                // no olvidar generar un div con el respectivo ID para mostrar la respuesta 
+                // obtener la respuesta y convertirla usando el JSON.parse 
+                $('#response').html('<div class="alert alert-success">Se agregado exitosamente!</div>'); 
+            }, 
+            error: function(err) { 
+                // no olvidar generar un div con el respectivo ID para mostrar la respuesta 
+                //obtener la respuesta y convertirla usando el JSON.parse 
+                //mostrar el error en la siguiente alerta 
+                $('#response').html('<div class="alert alert-danger">Error al agregar el voluntario.</div>'); 
+            } 
+        }); 
+    }) 
+});
