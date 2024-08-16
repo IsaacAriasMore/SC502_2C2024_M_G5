@@ -62,14 +62,14 @@ $(document).ready(function () {
   function updatePaymentMethod() {
     var metodoPago = $('#metodoPago').val();
     if (metodoPago === 'sinpe') {
-      $('#sinpeContainer').show();
-      $('#tarjetaContainer').hide();
+        $('#sinpe').show();
+        $('#tarjeta').hide();
     } else if (metodoPago === 'tarjeta') {
-      $('#sinpeContainer').hide();
-      $('#tarjetaContainer').show();
+        $('#sinpe').hide();
+        $('#tarjeta').show();
     } else {
-      $('#sinpeContainer').hide();
-      $('#tarjetaContainer').hide();
+        $('#sinpe').hide();
+        $('#tarjeta').hide();
     }
   }
   

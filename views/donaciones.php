@@ -49,9 +49,11 @@
               <input type="email" id="email" name="email">
             </div>
             <div>
-              <label for="tel">Teléfono:</label>
-              <input type="tel" id="tel" name="tel">
+              <label for="telefono">Teléfono:</label>
+              <input type="text" id="telefono" name="telefono">
             </div>
+<input type="hidden" id="estado" name="estado" value="1">
+
           </fieldset>
         </form>
       </div>
@@ -70,7 +72,7 @@
               </select>
             </div>
             <div class="mb-3">
-              <label for="totalAmount" class="form-label">Total a donar</label>
+              <label for="total" class="form-label">Total a donar</label>
               <input type="text" class="form-control" id="total" name="total">
             </div>
             <label for="metodoPago" class="form-label">Método de Pago</label>
@@ -79,13 +81,13 @@
               <option value="sinpe">SINPE Móvil</option>
               <option value="tarjeta">Tarjeta</option>
             </select>
-            <div class="mb-3" id="sinpeContainer" style="display: none;">
-              <label for="sinpeNumber" class="form-label">Número SINPE Móvil</label>
-              <input type="text" class="form-control" id="sinpeNumber" name="sinpeNumber" placeholder="Ingrese el número SINPE">
+            <div class="mb-3" id="sinpe" style="display: none;">
+              <label for="numero" class="form-label">Número SINPE Móvil</label>
+              <input type="text" class="form-control" id="numero" name="numero" placeholder="Ingrese el número SINPE">
             </div>
-            <div class="mb-3" id="tarjetaContainer" style="display: none;">
-              <label for="tarjetaNumber" class="form-label">Número de Tarjeta</label>
-              <input type="text" class="form-control" id="tarjetaNumber" name="tarjetaNumber" placeholder="Ingrese el número de tarjeta">
+            <div class="mb-3" id="tarjeta" style="display: none;">
+              <label for="numero" class="form-label">Número de Tarjeta</label>
+              <input type="text" class="form-control" id="numero" name="numero" placeholder="Ingrese el número de tarjeta">
             </div>
           </fieldset>
         </form>
