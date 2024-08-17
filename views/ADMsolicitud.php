@@ -260,7 +260,7 @@
               </select>
             </div>
             <div class="modal-footer">
-              <button class="btn" style="background-color: #434B4D; color: white;" type="button">Guardar</button>
+              <button class="btn" style="background-color: #434B4D; color: white;" type="button" id="submit">Guardar</button>
             </div>
           </div>
         </form>
@@ -298,6 +298,15 @@
         });
       });
     });
+
+    <script>
+    document.getElementById('submit').addEventListener('click', function() {
+    document.querySelectorAll('.form-control').forEach(input => input.value = '');
+    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
+    alert('Información enviada, gracias por contar con nosotros');
+    });
+    </script>
+    
   </script>
 </body>
 

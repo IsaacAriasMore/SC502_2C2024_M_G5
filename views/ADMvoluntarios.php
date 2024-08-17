@@ -63,7 +63,7 @@
               </div>
               <div class="modal-footer">
                 <button class="btn" id="btn-guardar" style="background-color: #434B4D; color: white;"
-                  type="button">Guardar</button>
+                  type="button" id="Guardar">Guardar</button>
               </div>
           </form>
         </div>
@@ -227,8 +227,21 @@
     function hideEditVoluntario() {
       const editModal = new bootstrap.Modal(document.getElementById('editarVoluntario'));
       editModal.hide();
+
+      <script>
+    document.getElementById('Guardar').addEventListener('click', function() {
+    document.querySelectorAll('.form-control').forEach(input => input.value = '');
+    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
+    alert('Información enviada, gracias por contar con nosotros');
+    });
+    </script>
+
     }
+
+    
+    
   </script>
+
 </body>
 
 </html>

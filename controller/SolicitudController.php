@@ -1,4 +1,6 @@
 <?php
+
+
     require_once '../models/SolicitudModel.php';
     $nombre = (isset($_POST["nombre"])) ? $_POST["nombre"] : "";
     $apellido = (isset($_POST["apellido"])) ? $_POST["apellido"] : "";
@@ -12,6 +14,7 @@
     $Provincia = (isset($_POST["Provincia"])) ? $_POST["Provincia"] : "";
     $Canton = (isset($_POST["Canton"])) ? $_POST["Canton"] : "";
     $Destino = (isset($_POST["Destino"])) ? $_POST["Destino"] : "";
+    
     $Solicitud = new SolicitudModel();
     $Solicitud->setNombre($nombre);
     $Solicitud->setapellido($apellido);
@@ -34,4 +37,7 @@
         $resp = array("exito"=> false,"msg"=>"Se presento un error");
         echo json_encode($resp);
     }
+    
+    
+
 ?>

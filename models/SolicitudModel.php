@@ -208,6 +208,43 @@ class SolicitudModel extends Conexion {
             return json_encode($error);
         }
     }
+
+    public function guardar() {
+        try {
+            $query = "INSERT INTO INSERT INTO `TabalaSolicitudes`(`nombre`, `apellido` , `telefono` , `ayuda` , `ApellidoFamiliar`, `NumIntegrantesP`
+            , `Niños` , `Adolescentes`, `Adultos`, `Provincia`, , `Canton`, `Destino`) 
+            VALUES (:nombrePDO,:apellidoPDO,:telefonoPDO,:ayudaPDO,:aApellidoFamiliarPDO,:NumIntegrantesPPDO,:NiñosPDO,:AdolescentesPDO,:AdultosPDO,:ProvinciaPDO
+            ,:CantonPDO,:DestinoPDO)";
+            $stmt = $this->conn->prepare($sql);
+            $resultado->bindParam(':nombre', $this->nombre);
+            $resultado->bindParam(':lugar', $this->apellido);
+            $resultado->bindParam(':fecha', $this->telefono);
+            $resultado->bindParam(':hora', $this->ayuda);
+            $resultado->bindParam(':hora', $this->ApellidoFamiliar);
+            $resultado->bindParam(':hora', $this->NumIntegrantesP);
+            $resultado->bindParam(':hora', $this->Niños);
+            $resultado->bindParam(':hora', $this->Adolescentes);
+            $resultado->bindParam(':hora', $this->Adultos);
+            $resultado->bindParam(':hora', $this->Provincia);
+            $resultado->bindParam(':hora', $this->Canton);
+            $resultado->bindParam(':hora', $this->Destino);
+            $stmt->execute();
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage());
+        }
+    }
+
+    public function listar() {
+        try {
+            $sql = "SELECT * FROM TablaSolicitudes";
+            $stmt = $this->conn->query($sql);
+            return $stmt->resultado(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage());
+        }
+    }
+    
+
     
 }
  //$val = new S9formModel();

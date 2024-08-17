@@ -115,6 +115,14 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
   <script src="./assets/js/voluntarios.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+    document.getElementById('submit').addEventListener('click', function() {
+    document.querySelectorAll('.form-control').forEach(input => input.value = '');
+    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
+    alert('Información enviada, gracias por contar con nosotros');
+    });
+    </script>
 </body>
 
 </html>
