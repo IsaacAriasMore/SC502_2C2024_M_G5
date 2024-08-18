@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', function(event) { // Agregar un evento al enviar el formulario
         event.preventDefault(); // Prevenir el envío del formulario por defecto
 
-        const email = document.getElementById('correo').value.trim();
-        const password = document.getElementById('contrasena').value.trim();
+        const correo = document.getElementById('correo').value.trim();
+        const contrasena = document.getElementById('contrasena').value.trim();
 
         // Validar credenciales mediante AJAX
         const xhr = new XMLHttpRequest();
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.success) {
                     // Guardar datos en sessionStorage
-                    sessionStorage.setItem('role', response.role);
+                    sessionStorage.setItem('rol', response.rol);
                     // Redirigir a la página principal
                     window.location.href = './index.php';
                 } else {
