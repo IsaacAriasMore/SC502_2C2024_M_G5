@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Validar datos de registro mediante AJAX
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'RegistrarseController.php', true); // URL del controlador
+        xhr.open('POST', 'controller/registrarseController.php', true); // URL del controlador
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
         xhr.onreadystatechange = function() {
