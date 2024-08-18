@@ -13,25 +13,26 @@
 <div class="contenido">
     <div class="container">
         <h2>Registro</h2>
-        <form action="signup_process.php" method="post" class="form-centered" id="registerForm">
-            <!-- Formulario de registro -->
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+        <form action="registrarseController.php" method="post" class="form-centered" id="registerForm">
+    <!-- Formulario de registro -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
 
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required><br><br>
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" required><br><br>
 
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" required><br><br>
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required><br><br>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required><br><br>
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required><br><br>
 
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required><br><br>
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required><br><br>
 
-            <button type="button" class="boton btn btn-success" value="Registrarse" form="registerForm">Registrarse</button>
-        </form>
+    <button type="submit" class="boton btn btn-success">Registrarse</button>
+</form>
+
         <div id="response" class="mt-3"></div>
         <p>¿Ya tienes una cuenta? <a href="./Iniciar_Sesion.php">Inicia sesión aquí</a>.</p>
     </div>
