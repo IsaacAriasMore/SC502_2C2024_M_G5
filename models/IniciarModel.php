@@ -6,8 +6,8 @@ class IniciarModel {
         $this->db = $db;
     }
 
-    public function Autenticacion($correo, $contrasena) {
-        $sql = "SELECT * FROM users WHERE correo = :correo LIMIT 1";
+    public function authenticate($correo, $contrasena) {
+        $sql = "SELECT * FROM usuarios WHERE correo = :correo LIMIT 1";
         $stmt = $this->db->prepare($sql);
         $stmt->execute(['correo' => $correo]);
 
