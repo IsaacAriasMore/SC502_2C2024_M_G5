@@ -5,191 +5,250 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/Actividades.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css">        
+  <link rel="stylesheet" href="plugins/toastr/toastr.css">
   <title>Apoyo/Actividades</title>
 </head>
 
 <body>
-  <?php include 'plantilla.php'; ?>
-  <br><br><br><br><br>
+<?php include 'plantilla.php'; 
+?>
 
-  <section class="py-4 mb-4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-5 d-flex justify-content-center">
-          <button type="button" class="btn btn-block" style="background-color: #434B4D; color: white;" data-bs-toggle="modal" data-bs-target="#agregarActividad">
-            <i class="fas fa-plus"></i> Agregar Actividad
-          </button>
+<br>
+<br>
+<br>
+<br>
+  <div class="row">
+    <!-- Formulario de creación de actividad -->
+    <div class="col-md-12" id="formulario_add" >
+      <div class="card card-dark">
+        <div class="card-header">
+          <h1 class="card-title" style="text-align: center">Agregar una actividad</h1>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div id="agregarActividad" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <div class="modal-header text-white" style="background-color: #434B4D; color: white;">
-            <h5 class="modal-title">Agregar Actividad</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <form name="actividad_add" id="actividad_add" method="POST">
+                <input type="hidden" id="existeActividad" name="existeActividad">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="lugar">Lugar</label>
+                      <input type="text" class="form-control" id="lugar" name="lugar" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="fecha">Fecha</label>
+                      <input type="date" class="form-control" id="fecha" name="fecha" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="hora">Hora</label>
+                      <input type="time" class="form-control" id="hora" name="hora" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="estado">Estado en el sistema</label>
+                      <select name="estado" id="estado" class="form-control">
+                        <option value="1" selected>Activado</option>
+                        <option value="0">Desactivado</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <input type="submit" id="btnRegistrar" class="btn btn-success" value="Registrar">
+                    <input type="reset" class="btn btn-warning" value="Borrar datos">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-1"></div>
           </div>
-          <form action="/Actividad/guardar" method="POST" class="was-validated" enctype="multipart/form-data">
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="nombre">Actividad</label>
-                <input type="text" class="form-control" name="nombre" required />
-              </div>
-              <div class="mb-3">
-                <label for="apellido">Lugar</label>
-                <input type="text" class="form-control" name="apellido" required />
-              </div>
-              <div class="mb-3">
-                <label for="telefono">Fecha</label>
-                <input type="text" class="form-control" name="telefono" required />
-              </div>
-              <div class="mb-3">
-                <label for="correo">Hora</label>
-                <input type="text" class="form-control" name="correo" required />
-              </div>
-            <div class="modal-footer">
-              <button class="btn" id="btn-guardar" style="background-color: #434B4D; color: white;" type="button">Guardar</button>
-            </div>
-          </form>
         </div>
+        <!-- /.card-body -->
       </div>
     </div>
-  </section>
 
-  <section id="Actividades">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-9">
-          <div class="card">
-            <div class="card-header text-center">
-              <h4>Actividades</h4>
+    <!-- Formulario de modificación de actividad -->
+    <div class="col-md-12" id="formulario_update">
+      <div class="card card-dark">
+        <div class="card-header">
+          <h3 class="card-title">Modificar una actividad</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <form name="actividad_update" id="actividad_update" method="POST">
+                <input type="hidden" class="form-control" id="EId" name="id">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Enombre">Nombre</label>
+                      <input type="text" class="form-control" id="Enombre" name="nombre" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Elugar">Lugar</label>
+                      <input type="text" class="form-control" id="Elugar" name="lugar" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Efecha">Fecha</label>
+                      <input type="date" class="form-control" id="Efecha" name="fecha" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Ehora">Hora</label>
+                      <input type="time" class="form-control" id="Ehora" name="hora" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Eestado">Estado en el sistema</label>
+                      <select name="estado" id="Eestado" class="form-control">
+                        <option value="1" selected>Activado</option>
+                        <option value="0">Desactivado</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <input type="submit" class="form-control btn btn-warning" value="Modificar">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="button" class="form-control btn btn-info" value="Cancelar" onclick="cancelarForm()">
+                  </div>
+                </div>
+              </form>
             </div>
-            <div>
-              <table class="table table-striped table-hover">
-                <thead class="table-dark">
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+        <!-- /.card-body -->
+      </div>
+    </div>
+
+    <!-- Listado de actividades -->
+    <div class="col-md-12">
+      <div class="card card-dark">
+        <div class="card-header">
+          <h1 class="card-title" style="text-align: center">Listado de Actividades</h1>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+          <div class="row mt-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <table id="tbllistado" class="table table-striped table-bordered table-hover">
+                <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Actividad</th>
+                    <th>ID</th>
+                    <th>Nombre</th>
                     <th>Lugar</th>
                     <th>Fecha</th>
                     <th>Hora</th>
-                    <th></th>
+                    <th>Estado</th>
+                    <th>Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Donacion de ropa</td>
-                    <td>Guadalupe San Jose</td>
-                    <td>12/10/2024</td>
-                    <td>11:00am</td>
-                    <td>
-                      <button class="btn btn-success" onclick="showEditActividad(1, 'Donacion de ropa', 'Guadalupe San Jose', '12/10/2024', '11:00am')"><i class="fas fa-pencil"></i> Actualizar</button>
-                      <button class="btn btn-danger btn-eliminar"><i class="fas fa-trash"></i> Eliminar</button>
-                    </td>
-                  </tr>
                 </tbody>
+                <tfoot>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Lugar</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Estado</th>
+                    <th>Opciones</th>
+                  </tr>
+                </tfoot>
               </table>
             </div>
-            <div class="text-center p-2">
-              <span>Vacio</span>
-            </div>
+            <div class="col-md-1"></div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <div id="editarActividad" class="modal fade" tabindex="-1" aria-labelledby="editActividadLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header text-white" style="background-color: #434B4D; color: white;">
-          <h5 class="modal-title">Editar Actividad</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <br>
+  <br>
+  <div>
+    <div class="col-md-12">
+      <div class="card card-dark">
+        <div class="card-header">
+          <h1 class="card-title" style="text-align:center">Gráfico de Actividades</h1>
         </div>
-        <form id="formEditActividad" method="POST" action="/Actividad/actualizar" class="was-validated" enctype="multipart/form-data">
-          <div class="modal-body">
-            <input type="hidden" id="edit-actividad-id" name="idActividad" />
-            <div class="mb-3">
-              <label for="edit-nombre">Actividad</label>
-              <input type="text" class="form-control" id="edit-nombre" name="nombre" required>
-            </div>
-            <div class="mb-3">
-              <label for="edit-apellido">Lugar</label>
-              <input type="text" class="form-control" id="edit-apellido" name="apellido" required>
-            </div>
-            <div class="mb-3">
-              <label for="edit-telefono">Fecha</label>
-              <input type="text" class="form-control" id="edit-telefono" name="telefono" required>
-            </div>
-            <div class="mb-3">
-              <label for="edit-correo">Hora</label>
-              <input type="text" class="form-control" id="edit-correo" name="correo" required>
-            </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success" id="btn-guardar-cambios">Guardar Cambios</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          </div>
-        </form>
+        <div class="container">
+          <h3 class="text-center">Estadísticas de Actividades</h3>
+          <canvas id="actividadesChart" width="20" height="10"></canvas>
+        </div>
       </div>
     </div>
-    </div>
-    </div>
-   
   </div>
 
-  <?php include 'plantillafooter.php'; ?>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <footer>
+    <?php include 'plantillafooter.php'; ?>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
-    document.getElementById('btn-guardar').addEventListener('click', function() {
-      Swal.fire({
-        icon: 'info',
-        title: 'Funcionalidad no disponible',
-        text: 'La opción de guardar una nueva donación aún no está disponible.'
-      });
-    });
-
-    document.getElementById('btn-guardar-cambios').addEventListener('click', function() {
-      Swal.fire({
-        icon: 'info',
-        title: 'Funcionalidad no disponible',
-        text: 'La opción de guardar los cambios aún no está disponible.'
-      });
-    });
-
-    document.querySelectorAll('.btn-eliminar').forEach(button => {
-      button.addEventListener('click', function() {
-        Swal.fire({
-          icon: 'info',
-          title: 'Funcionalidad no disponible',
-          text: 'La opción de eliminar una donación aún no está disponible.'
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('../controller/ADMactividadesController.php?op=obtener_estadisticas')
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.map(item => `Estado ${item.estado}`);
+            const values = data.map(item => item.cantidad);
+            
+            const ctx = document.getElementById('actividadesChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Cantidad de Actividades',
+                        data: values,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
         });
-      });
-    });
-
-    function showEditActividad(id, nombre, lugar, fecha, hora) {
-      document.getElementById('edit-actividad-id').value = id;
-      document.getElementById('edit-nombre').value = nombre;
-      document.getElementById('edit-apellido').value = lugar;
-      document.getElementById('edit-telefono').value = fecha;
-      document.getElementById('edit-correo').value = hora;
-
-      const editModal = new bootstrap.Modal(document.getElementById('editarActividad'));
-      editModal.show();
-    }
-  </script>
+});
+</script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="plugins/DataTables/datatables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/bootbox/bootbox.min.js"></script>
+  <script src="plugins/toastr/toastr.js"></script>
+  <script src="assets/js/ADMactividades.js"></script>
 </body>
-
 </html>

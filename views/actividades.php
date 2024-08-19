@@ -53,82 +53,44 @@
             </div>
 
         </div>
-        <h1 style="text-align: center; margin-bottom: 80px;">Proximas actividades</h1>
+        <h1 style="text-align: center; margin-bottom: 80px;">Próximas Actividades</h1>
         <div class="container" style="margin-bottom: 5%;">
             <div class="row">
-                <div class="col-md-3 mb-3">
-                    <div class="card">
-                        <img src="https://www.recogemostususados.com/images/servicios/recogida-de-ropa.jpg" class="card-img-top" alt="Imagen actividad">
-                        <div class="card-body">
-                            <h5 class="card-title">Recolección de prendas</h5>
-                            <p class="card-text">Sábado 27 de julio</p>
-                            <p class="card-text">Universidad Fidelitas de Costa Rica, San Pedro</p>
-                            <p class="card-text">Teléfono: +506 8888-8888</p>
-                            <p class="card-text">Correo electrónico: inmigra@gmail.com</p>
-                        </div>
-                        <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15720.035903368916!2d-84.0350103!3d9.9332099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3f47ea4ff37%3A0x7a7818a6a9e5c90c!2sUniversidad%20Fid%C3%A9litas!5e0!3m2!1ses!2scr!4v1721068241124!5m2!1ses!2scr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                // Conectar a la base de datos
+                require_once '../models/ADMactividadesModel.php';
 
-                <div class="col-md-3 mb-3">
-                    <div class="card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1y4LSY25WuwLUrk38XhwbaDDppr8XsKFhFg&s" class="card-img-top" alt="Imagen actividad">
-                        <div class="card-body">
-                            <h5 class="card-title">Recolección de víveres no perecederos</h5>
-                            <p class="card-text">Sábado 10 de agosto</p>
-                            <p class="card-text">Universidad Fidelitas de Costa Rica, San Pedro</p>
-                            <p class="card-text">Teléfono: +506 8888-8888</p>
-                            <p class="card-text">Correo electrónico: inmigra@gmail.com</p>
-                        </div>
-                        <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15720.035903368916!2d-84.0350103!3d9.9332099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3f47ea4ff37%3A0x7a7818a6a9e5c90c!2sUniversidad%20Fid%C3%A9litas!5e0!3m2!1ses!2scr!4v1721068241124!5m2!1ses!2scr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>
-                    </div>
-                </div>
+                ADMactividadesModel::getConexion();
+                $actividadModel = new ADMactividadesModel();
+                $actividades = $actividadModel->listarTodosDb();
+                ADMactividadesModel::desconectar();
 
-                <div class="col-md-3 mb-3">
-                    <div class="card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60W_-46cf_mNiRJ25M4p-xuUy8SfkUKMMSA&s" class="card-img-top" alt="Imagen actividad">
-                        <div class="card-body">
-                            <h5 class="card-title">Comedor público</h5>
-                            <p class="card-text">Sábado 31 de agosto</p>
-                            <p class="card-text">Universidad Fidelitas de Costa Rica, San Pedro</p>
-                            <p class="card-text">Teléfono: +506 8888-8888</p>
-                            <p class="card-text">Correo electrónico: inmigra@gmail.com</p>
-                        </div>
-                        <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15720.035903368916!2d-84.0350103!3d9.9332099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3f47ea4ff37%3A0x7a7818a6a9e5c90c!2sUniversidad%20Fid%C3%A9litas!5e0!3m2!1ses!2scr!4v1721068241124!5m2!1ses!2scr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card">
-                        <img src="https://png.pngtree.com/background/20220728/original/pngtree-soccer-football-championship-vector-background-with-sports-ball-and-goals-picture-image_1848497.jpg" class="card-img-top" alt="Imagen actividad">
-                        <div class="card-body">
-                            <h5 class="card-title">Campeonato futbolero</h5>
-                            <p class="card-text">domingo 8 de septiembre</p>
-                            <p class="card-text">plaza Jose Maria Zeledon</p>
-                            <p class="card-text">Teléfono: +506 8888-8888</p>
-                            <p class="card-text">Correo electrónico: inmigra@gmail.com</p>
-                        </div>
-                        <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d744.6308668749604!2d-84.04141672938339!3d9.91852756245996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3dc248f0349%3A0xb39c8908379bdaf1!2sPlaza%20de%20Jose%20Mar%C3%ADa%20Zeled%C3%B3n%20(AD%20Asturias)!5e0!3m2!1ses!2scr!4v1721163221299!5m2!1ses!2scr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>
-                    </div>
+                // Mostrar las actividades
+                if (is_array($actividades) || is_object($actividades)) {
+                    foreach ($actividades as $actividad) {
+                        echo '<div class="col-md-3 mb-3">';
+                        echo '    <div class="card">';
+                        echo '        <img src="../views/assets/img/Logo.png" class="card-img-top" alt="Imagen actividad">';
+                        echo '        <div class="card-body">';
+                        echo '            <h5 class="card-title">' . htmlspecialchars($actividad->getNombre()) . '</h5>';
+                        echo '            <p class="card-text">' . htmlspecialchars($actividad->getFecha()) . '</p>';
+                        echo '            <p class="card-text">' . htmlspecialchars($actividad->getLugar()) . '</p>';
+                        echo '            <p class="card-text">Teléfono: +506 8888-8888</p>';
+                        echo '            <p class="card-text">Correo electrónico: inmigra@gmail.com</p>';
+                        echo '        </div>';
+                        echo '        <div class="map">';
+                        echo '            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15720.035903368916!2d-84.0350103!3d9.9332099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3f47ea4ff37%3A0x7a7818a6a9e5c90c!2sUniversidad%20Fid%C3%A9litas!5e0!3m2!1ses!2scr!4v1721068241124!5m2!1ses!2scr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+                        echo '        </div>';
+                        echo '    </div>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo '<p>No se encontraron actividades.</p>';
+                }
+                ?>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
 
     <footer>
         <?php include 'plantillafooter.php'; ?>
