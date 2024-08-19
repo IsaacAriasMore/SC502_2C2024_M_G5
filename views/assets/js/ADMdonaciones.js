@@ -35,7 +35,7 @@ function listarDonacionesTodos() {
 /* Función principal */
 $(function () {
     $('#formulario_update').hide();
-    listarUsuariosTodos();
+    listarDonacionesTodos();
   });
 
 /* CRUD */
