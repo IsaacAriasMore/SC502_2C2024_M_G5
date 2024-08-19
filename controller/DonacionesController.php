@@ -8,12 +8,7 @@
     $total = (isset($_POST["total"])) ? $_POST["total"] : "";
     $metodoPago = (isset($_POST["metodoPago"])) ? $_POST["metodoPago"] : "";
     $numero = (isset($_POST["numero"])) ? $_POST["numero"] : "";
-    $numero = (isset($_POST["numero"])) ? $_POST["numero"] : "";
-    $estado = isset($_POST["estado"]) ? $_POST["estado"] : "1";
-
-
-
-
+    $estado = isset($_POST["estado"]) ? $_POST["estado"] : "0";
 
     $persona = new DonacionesModel();
     $persona->setNombre($nombre);

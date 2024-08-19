@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+  window.sr = ScrollReveal();
+  sr.reveal('.iz', {
+    delay: 500,
+    duration: 2500,
+    origin: 'left',
+    distance: '100px',
+    reset: true
+  });
+});
+
+
 $(document).ready(function () {
     $('#submit').on('click', function (e) {
       e.preventDefault();
@@ -29,47 +41,4 @@ $(document).ready(function () {
           $('#response').html('<div class="alert alert-danger">Error al enviar los datos.</div>');
         }
       });
-    });
-  
-    window.sr = ScrollReveal();
-    sr.reveal('.iz', {
-      delay: 500,
-      duration: 3500,
-      origin: 'left',
-      distance: '100px',
-      reset: true
-    });
-  
-    AOS.init();
-  });
-  
-    
-  window.sr = ScrollReveal();
-  sr.reveal('.iz', {
-    delay: 500,
-    duration: 3500,
-    origin: 'left',
-    distance: '100px',
-    reset: true
-  });
-
-  AOS.init();
-
-
-
-
-  
-  function updatePaymentMethod() {
-    var metodoPago = $('#metodoPago').val();
-    if (metodoPago === 'sinpe') {
-        $('#sinpe').show();
-        $('#tarjeta').hide();
-    } else if (metodoPago === 'tarjeta') {
-        $('#sinpe').hide();
-        $('#tarjeta').show();
-    } else {
-        $('#sinpe').hide();
-        $('#tarjeta').hide();
-    }
-  }
-  
+    });});

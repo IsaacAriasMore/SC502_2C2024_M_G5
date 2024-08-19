@@ -92,6 +92,7 @@ class DonacionesModel extends Conexion {
     public function setEstado($estado) {
         $this->estado = $estado;
     }
+   
 
     //constructor
     public function __construct(){}

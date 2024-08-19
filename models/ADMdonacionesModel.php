@@ -294,6 +294,21 @@ public function desactivar() {
         return $error;
         }
     }
+    public function obtenerEstadisticasDonaciones() {
+        $query = "SELECT donacion, COUNT(*) AS cantidad FROM donaciones GROUP BY donacion";
+        try {
+            self::getConexion();
+            $resultado = self::$cnx->prepare($query);
+            $resultado->execute();
+            self::desconectar();
+            return $resultado->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $Exception) {
+            self::desconectar();
+            $error = "Error ".$Exception->getCode().": ".$Exception->getMessage();
+            return json_encode($error);
+        }
+    }
+    
         
     /*=====  End of Metodos de la Clase  ======*/  
 }

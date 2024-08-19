@@ -12,7 +12,7 @@
 <body>
   <div id="response"></div>
   <?php include 'plantilla.php'; ?>
-  <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left; width: 380px; height: 1600px; text-align: center; align-items: center;">
+  <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left; width: 380px; height: 1350px; text-align: center; align-items: center;">
     <br>
     <h1 class="titulo1" style="margin-top: 100px">DONACIONES PERMITIDAS</h1>
     <p class="info1" style="font-size: 30px; font-style: italic; margin-top: 40px; text-align: center; color: aliceblue;">Económicas</p>
@@ -30,6 +30,7 @@
     <h1 class="text-center" style="text-align: center; text-shadow: 1px 1px 1px grey;">Como realizar la donación</h1>
     <div class="text2" style="text-align:center; width:70%;">
       <p>Ingresa tu información personal, luego selecciona el tipo de donación, después explora las opciones de donación y especifica la cantidad, verifica la información y selecciona Enviar</p>
+      <p><strong>DEBES ENVIAR TU COMPROBANTE DEL SINPE AL WHATSAAP +506 88612443 PARA QUE LA DONACI[ON QUEDE ACTIVA</strong></p>
     </div>
     <div class="inicio">
       <div class="forms1">
@@ -52,7 +53,7 @@
               <label for="telefono">Teléfono:</label>
               <input type="text" id="telefono" name="telefono">
             </div>
-<input type="hidden" id="estado" name="estado" value="1">
+<input type="hidden" id="estado" name="estado" value="0">
 
           </fieldset>
         </form>
@@ -61,9 +62,10 @@
         <form id="formulario2" method="post">
           <fieldset>
             <legend style="text-align:center;"><span class="number" style="text-align:center;">2</span>Detalles</legend>
+            
             <div class="mb-3">
               <label for="donacion" class="form-label">Tipo de donación</label>
-              <select class="form-select" id="donacion" onchange="updateTotal()" name="donacion">
+              <select class="form-select" id="donacion" name="donacion">
                 <option value="0">Seleccione...</option>
                 <option value="Canasta de víveres">Canasta de víveres</option>
                 <option value="Pasajes"name="Pasajes">Pasajes</option>
@@ -76,18 +78,12 @@
               <input type="text" class="form-control" id="total" name="total">
             </div>
             <label for="metodoPago" class="form-label">Método de Pago</label>
-            <select class="form-select" id="metodoPago" name="metodoPago" onchange="updatePaymentMethod()">
-              <option value="0">Seleccione...</option>
+            <select class="form-select" id="metodoPago" name="metodoPago">
               <option value="sinpe">SINPE Móvil</option>
-              <option value="tarjeta">Tarjeta</option>
             </select>
-            <div class="mb-3" id="sinpe" style="display: none;">
+            <div class="mb-3">
               <label for="numero" class="form-label">Número SINPE Móvil</label>
               <input type="text" class="form-control" id="numero" name="numero" placeholder="Ingrese el número SINPE">
-            </div>
-            <div class="mb-3" id="tarjeta" style="display: none;">
-              <label for="numero" class="form-label">Número de Tarjeta</label>
-              <input type="text" class="form-control" id="numero" name="numero" placeholder="Ingrese el número de tarjeta">
             </div>
           </fieldset>
         </form>
@@ -108,17 +104,10 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/donaciones.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-    document.getElementById('submit').addEventListener('click', function() {
-    document.querySelectorAll('.form-control').forEach(input => input.value = '');
-    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-    alert('Información enviada, gracias por contar con nosotros');
-    });
-    </script>
+
 
 </body>
 

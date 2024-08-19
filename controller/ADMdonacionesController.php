@@ -141,6 +141,12 @@ switch ($_GET["op"]) {
             $modificados = $usuario->actualizarDonacion();
             echo $modificados > 0 ? 1 : 0;
             break;
+            
+            case 'obtener_estadisticas':
+                $model = new ADMdonacionesModel();
+                $result = $model->obtenerEstadisticasDonaciones();
+                echo json_encode($result);
+                break;
+        }
         
-}
 ?>

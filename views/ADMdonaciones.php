@@ -77,9 +77,7 @@
                     <div class="form-group">
                       <label for="metodoPago" class="form-label">Método de Pago</label>
                       <select class="form-select" id="metodoPago" name="metodoPago">
-                        <option value="0">Seleccione...</option>
                         <option value="sinpe">SINPE Móvil</option>
-                        <option value="tarjeta">Tarjeta</option>
                       </select>
                     </div>
                   </div>
@@ -94,7 +92,7 @@
                                         <div class="form-group">
                                             <label for="estado">Estado en el sistema</label>
                                             <select name="estado" id="estado" class="form-control">
-                                                <option" value="1" selected>Activado</option>
+                                                <option value="1" selected>Activado</option>
                                                 <option value="0">Desactivado</option>
                                             </select>
                                         </div>
@@ -175,9 +173,7 @@
                     <div class="form-group">
                       <label for="EmetodoPago" class="form-label">Método de Pago</label>
                       <select class="form-select" id="EmetodoPago" name="metodoPago">
-                        <option value="0">Seleccione...</option>
                         <option value="sinpe">SINPE Móvil</option>
-                        <option value="tarjeta">Tarjeta</option>
                       </select>
                     </div>
                   </div>
@@ -187,6 +183,16 @@
                                                 name="numero" required>
                                         </div>
                                     </div>
+                                     <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="estado">Estado en el sistema</label>
+                                            <select name="estado" id="estado" class="form-control">
+                                                <option value="1" selected>Activado</option>
+                                                <option value="0">Desactivado</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                 <div class="row">
                   <div class="form-group col-md-6">
                     <input type="submit" class="form-control btn btn-warning" value="Modificar">
@@ -258,10 +264,54 @@
   </div>
   <BR>
   <BR>
+  <div>
+  <div class="col-md-12">
+      <div class="card card-dark">
+        <div class="card-header">
+          <h1 class="card-title" style="text-align:center">Gráfico de Donaciones</h1>
+        </div>
+        <div class="container">
+    <h3 class="text-center">Estadísticas de Donaciones</h3>
+    <canvas id="donacionesChart" width="20" height="10"></canvas>
+</div>
+
   <footer>
     <?php include 'plantillafooter.php'; ?>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('../controller/ADMdonacionesController.php?op=obtener_estadisticas')
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.map(item => item.donacion);
+            const values = data.map(item => item.cantidad);
+            
+            const ctx = document.getElementById('donacionesChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Cantidad de Donaciones',
+                        data: values,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+});
+</script>
   <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="plugins/DataTables/datatables.min.js"></script>

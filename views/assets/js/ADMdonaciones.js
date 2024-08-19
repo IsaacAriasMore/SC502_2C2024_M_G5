@@ -25,6 +25,7 @@ function listarDonacionesTodos() {
             error: function (e) {
                 console.log(e.responseText);
             },
+            dataSrc: 'aaData',
             destroy: true, // Permite reiniciar la tabla si ya existe
             pageLength: 5 // Número de registros por página
         }
@@ -34,8 +35,8 @@ function listarDonacionesTodos() {
 /* Función principal */
 $(function () {
     $('#formulario_update').hide();
-    listarDonacionesTodos();
-});
+    listarUsuariosTodos();
+  });
 
 /* CRUD */
 
