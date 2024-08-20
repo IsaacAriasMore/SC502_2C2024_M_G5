@@ -51,52 +51,46 @@
     <legend style="text-align:center;"><span class="number" style="text-align:center;">1</span>Datos personales</legend>
     <div class="inicio">
       <div class="forms1">
-        <form id="formulario" method="post" style="align-content:center;">
-          
-          <fieldset>
-            <div>
-            <label for="nombre_voluntario">Nombre:</label>
-            <input type="text" id="nombre_voluntario" name="nombre_voluntario">
-          </div>
-            <div>
-            <label for="apellido_voluntario">Apellidos:</label>
-            <input type="text" id="apellido_voluntario" name="apellido_voluntario">
-            </div>
-
-            <div>
-            <label for="email_voluntario">Email:</label>
-            <input type="email" id="email_voluntario" name="email_voluntario">
-            </div>
-
-            <div>
-            <label for="telefono_voluntario">Telefono:</label>
-            <input type="number" id="telefono_voluntario" name="telefono_voluntario">
-            </div>
-          </fieldset>
-        </form>
-      </div>
-      <div class="forms2">
-        <form id="formulario2"  method="post">
-          <fieldset>
-            <div>
-            <label for="cedula_voluntario">Cedula:</label>
-            <input type="number" id="cedula_voluntario" name="cedula_voluntario">
-            </div>
-            <div>
-            <label for="residencia_voluntario">Luegar de residencia:</label>
-            <input type="text" id="residencia_voluntario" name="residencia_voluntario">
-            </div>
-            <div>
-            <label for="definicion_voluntario">Como te definirias en una palabra?</label>
-            <input type="text" id="definicion_voluntario" name="definicion_voluntario">
-            </div>
-           
-          </fieldset>
-        </form>
-      </div>
+      <form id="formulario1" method="post" style="align-content:center;">
+  <fieldset>
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
     </div>
+    <div>
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos" name="apellidos">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div>
+      <label for="telefono">Telefono:</label>
+      <input type="number" id="telefono" name="telefono">
+    </div>
+    
+    <input type="hidden" id="estado" name="estado" value="0">
+  </fieldset>
+</form>
+</div>
+<form id="formulario2" method="post">
+  <fieldset style="margin-left:30px">
+    <div>
+      <label for="cedula" style="margin-top:30px">Cedula:</label>
+      <input type="number" id="cedula" name="cedula">
+    </div>
+    <div>
+      <label for="residencia">Lugar de residencia:</label>
+      <input type="text" id="residencia" name="residencia">
+    </div>
+      <label for="descripcion">Como te definirías en una palabra?</label>
+      <input type="text" id="descripcion" name="descripcion">
+    </div>
+  </fieldset>
+</form>
     <div class="boton mb-3 d-flex justify-content-center">
-      <button type="submit" id="submit" class="btn btn-outline-success btn-lg" from="formulario">ENVIAR</button>
+    <button type="submit" id="submit" class="btn btn-outline-success btn-lg" form="formulario,formulario2">ENVIAR</button>
     </div>
     </div></div>
   <h3 style="margin-top:100px; margin-bottom: 50px; font-style: italic; text-align: center;">"Las pequeñas ayudas tienen grandes recompensas"</h3>
@@ -108,21 +102,15 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+    <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/voluntarios.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-    document.getElementById('submit').addEventListener('click', function() {
-    document.querySelectorAll('.form-control').forEach(input => input.value = '');
-    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-    alert('Información enviada, gracias por contar con nosotros');
-    });
-    </script>
+
+
 </body>
 
 </html>

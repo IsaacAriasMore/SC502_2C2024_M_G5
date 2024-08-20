@@ -1,4 +1,3 @@
-
 sr.reveal('.iz', {
     delay: 500,
     duration: 3500,
@@ -66,29 +65,36 @@ sr.reveal('.img', {
     reset: true
 });
 
+$(document).ready(function () {
+  $('#submit').on('click', function (e) {
+    e.preventDefault();
 
-  $(document).ready(function () { 
-    $('#formulario').on('submit', function (e) { 
-        e.preventDefault(); 
-        var formData = new FormData($('#formulario')[0])
-        $.ajax({ 
-            url: '../controllers/VoluntariosController.php', 
-            type: 'POST', 
-            data: formData, 
-            contentType :  false,
-            processData  : false,
-            //generar un JSON con cada valor de cada campo del formulario 
-            success: function(response) { 
-                // no olvidar generar un div con el respectivo ID para mostrar la respuesta 
-                // obtener la respuesta y convertirla usando el JSON.parse 
-                $('#response').html('<div class="alert alert-success">Se agregado exitosamente!</div>'); 
-            }, 
-            error: function(err) { 
-                // no olvidar generar un div con el respectivo ID para mostrar la respuesta 
-                //obtener la respuesta y convertirla usando el JSON.parse 
-                //mostrar el error en la siguiente alerta 
-                $('#response').html('<div class="alert alert-danger">Error al agregar el voluntario.</div>'); 
-            } 
-        }); 
-    }) 
+    // Recoger los datos de ambos formularios
+    var formData1 = $('#formulario1').serializeArray();
+    var formData2 = $('#formulario2').serializeArray();
+
+    var unir_datos = {};
+    formData1.forEach(function(item) {
+      unir_datos[item.name] = item.value;
+    });
+    formData2.forEach(function(item) {
+      unir_datos[item.name] = item.value;
+    });
+
+    $.ajax({
+      url: '../controller/VoluntariosController.php',
+      type: 'POST',
+      data: unir_datos,
+      success: function (response) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Éxito',
+          text: 'Datos enviados exitosamente!'
+        });
+      },
+      error: function (err) {
+        $('#response').html('<div class="alert alert-danger">Error al enviar los datos.</div>');
+      }
+    });
+  });
 });

@@ -5,243 +5,282 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/Voluntarios.css">
-  <title>Apoyo/Voluntarios</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css">        
+  <link rel="stylesheet" href="plugins/toastr/toastr.css">
+  <title>Apoyo/voluntarioes</title>
 </head>
 
 <body>
-  <?php include 'plantilla.php'; ?>
-  <br><br><br><br><br>
-
-  <section class="py-4 mb-4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-5 d-flex justify-content-center">
-          <button type="button" class="btn btn-block" style="background-color: #434B4D; color: white;"
-            data-bs-toggle="modal" data-bs-target="#agregarVoluntarios">
-            <i class="fas fa-plus"></i> Agregar Voluntarios
-          </button>
+<?php include 'plantilla.php'; ?>
+<br>
+<br>
+<br>
+<br>
+  <div class="row">
+    <!-- Formulario de creación de donación -->
+    <div class="col-md-12" id="formulario_add" >
+      <div class="card card-dark">
+        <div class="card-header" >
+          <h1 class="card-title" style="text-align: center">Agregar un voluntario</h1>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div id="agregarVoluntarios" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <div class="modal-header text-white" style="background-color: #434B4D; color: white;">
-            <h5 class="modal-title">Agregar Voluntarios</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <form action="/Voluntarios/guardar" method="POST" class="was-validated" enctype="multipart/form-data">
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="inputNombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="inputNombre" name="nombre" placeholder="Nombre Completo"
-                  required>
-              </div>
-              <div class="mb-3">
-                <label for="inputApellidos" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="inputApellidos" name="apellidos"
-                  placeholder="Apellidos Completos" required>
-              </div>
-              <div class="mb-3">
-                <label for="inputTelefono" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="inputTelefono" name="telefono" placeholder="XXXX-XXXX"
-                  required>
-              </div>
-              <div class="mb-3">
-                <label for="inputEmail" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="inputEmail" name="correo"
-                  placeholder="ejemplo1@gmail.com" required>
-              </div>
-              <div class="mb-3">
-                <label for="inputAyuda" class="form-label">¿Cómo deseas ayudar?</label>
-                <textarea class="form-control" id="inputAyuda" name="como_ayudar" rows="3"
-                  style="resize: none;" required></textarea>
-              </div>
-              <div class="modal-footer">
-                <button class="btn" id="btn-guardar" style="background-color: #434B4D; color: white;"
-                  type="button" id="Guardar">Guardar</button>
-              </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="Voluntarios">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-9">
-          <div class="card">
-            <div class="card-header text-center">
-              <h4>Voluntarios</h4>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <form name="voluntario_add" id="voluntario_add" method="POST">
+                <input type="hidden" id="existevoluntario" name="existevoluntario">
+                <div class="row" >
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="apellidos">Apellidos</label>
+                      <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" class="form-control" id="email" name="email" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="telefono">Teléfono</label>
+                      <input type="text" class="form-control" id="telefono" name="telefono" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="cedula">Cedula</label>
+                      <input type="text" class="form-control" id="cedula" name="cedula" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="residencia">Residencia</label>
+                      <input type="text" class="form-control" id="residencia" name="residencia" required>
+                    </div>
+                  </div>
+                 
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="descripcion">Descripcion</label>
+                      <input type="text" class="form-control" id="descripcion" name="descripcion" required>
+                    </div>
+                  </div>
+                <div class="col-md-4">
+                              <div class="form-group">
+                                  <label for="estado">Estado en el sistema</label>
+                                   <select name="estado" id="estado" class="form-control">
+                                    <option value="1" selected>Activado</option>
+                                     <option value="0">Desactivado</option>
+                                    </select>
+                                    </div>
+                                 </div>
+                                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <input type="submit" id="btnRegistrar" class="btn btn-success" value="Registrar">
+                   
+                    <input type="reset" class="btn btn-warning" value="Borrar datos">
+                  </div>
+                </div>
+              </form>
             </div>
-            <div>
-              <table class="table table-striped table-hover">
-                <thead class="table-dark">
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+        <!-- /.card-body -->
+      </div>
+    </div>
+
+    <!-- Formulario de modificación de donación -->
+    <div class="col-md-12" id="formulario_update">
+      <div class="card card-dark">
+        <div class="card-header">
+          <h3 class="card-title">Modificar una donación</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <form name="voluntario_update" id="voluntario_update" method="POST">
+                <input type="hidden" class="form-control" id="EId" name="id">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Enombre">Nombre</label>
+                      <input type="text" class="form-control" id="Enombre" name="nombre" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Eapellidos">Apellidos</label>
+                      <input type="text" class="form-control" id="Eapellidos" name="apellidos" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Eemail">Email</label>
+                      <input type="email" class="form-control" id="Eemail" name="email" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Etelefono">Teléfono</label>
+                      <input type="text" class="form-control" id="Etelefono" name="telefono" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Ecedula">Cedula</label>
+                      <input type="text" class="form-control" id="Ecedula" name="cedula" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+
+                      <label for="Eresidencia">Residencia</label>
+                      <input type="text" class="form-control" id="Eresidencia" name="residencia" required>
+                    </div>
+                  </div>
+                 
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="Edescripcion">Descripcion</label>
+                      <input type="text" class="form-control" id="Edescripcion" name="descripcion" required>
+                    </div>
+                  </div>
+                                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <input type="submit" class="form-control btn btn-warning" value="Modificar">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="button" class="form-control btn btn-info" value="Cancelar" onclick="cancelarForm()">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+        <!-- /.card-body -->
+      </div>
+    </div>
+
+    <!-- Listado de voluntarioes -->
+    <div class="col-md-12">
+      <div class="card card-dark">
+        <div class="card-header">
+          <h1 class="card-title" style="text-align: center">voluntarioes existentes</h1>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+          <div class="row mt-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <table id="tbllistado" class="table table-striped table-bordered table-hover">
+                <thead>
                   <tr>
-                    <th>#</th>
+                    <th>ID</th>
                     <th>Nombre</th>
-                    <th>Apellido</th>
+                    <th>Apellidos</th>
+                    <th>Email</th>
                     <th>Teléfono</th>
-                    <th>Correo</th>
-                    <th>Cómo deseas ayudar</th>
-                    <th></th>
+                    <th>Cedula</th>
+                    <th>Residencia</th>
+                    <th>Descripcion</th>
+                    <th>Estado</th>
+                    <th>Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>123456789</td>
-                    <td>john.doe@example.com</td>
-                    <td>Quiero ayudar brindando transporte</td>
-                    <td>
-                      <button class="btn btn-success" onclick="showEditVoluntario('1')"><i
-                          class="fas fa-pencil"></i> Actualizar</button>
-                      <button class="btn btn-danger btn-eliminar"><i class="fas fa-trash"></i> Eliminar</button>
-                    </td>
-                  </tr>
                 </tbody>
+                <tfoot>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Cedula</th>
+                    <th>Residencia</th>
+                    <th>Descripcion</th>
+                    <th>Estado</th>
+                    <th>Opciones</th>
+                  </tr>
+                </tfoot>
               </table>
             </div>
-            <div class="text-center p-2">
-              <span>Vacio</span>
-            </div>
+            <div class="col-md-1"></div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <div id="editarVoluntario" class="modal fade" tabindex="-1" aria-labelledby="editVoluntarioLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header text-white" style="background-color: #434B4D; color: white;">
-          <h5 class="modal-title">Editar Voluntario</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form id="formEditVoluntario" method="POST" action="/Voluntarios/actualizar" class="was-validated"
-          enctype="multipart/form-data">
-          <div class="modal-body">
-            <input type="hidden" id="edit-voluntario-id" name="idVoluntarios">
-            <div class="mb-3">
-              <label for="editNombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="editNombre" name="nombre" placeholder="Nombre Completo"
-                required>
-            </div>
-            <div class="mb-3">
-              <label for="editApellidos" class="form-label">Apellidos</label>
-              <input type="text" class="form-control" id="editApellidos" name="apellidos"
-                placeholder="Apellidos Completos" required>
-            </div>
-            <div class="mb-3">
-              <label for="editTelefono" class="form-label">Teléfono</label>
-              <input type="text" class="form-control" id="editTelefono" name="telefono" placeholder="XXXX-XXXX"
-                required>
-            </div>
-            <div class="mb-3">
-              <label for="editCorreo" class="form-label">Correo</label>
-              <input type="email" class="form-control" id="editCorreo" name="correo" placeholder="ejemplo1@gmail.com"
-                required>
-            </div>
-            <div class="mb-3">
-              <label for="editAyuda" class="form-label">¿Cómo deseas ayudar?</label>
-              <textarea class="form-control" id="editAyuda" name="como_ayudar" rows="3" style="resize: none;"
-                required></textarea>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success" id="btn-guardar-cambios">Guardar Cambios</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          </div>
-        </form>
       </div>
     </div>
   </div>
+  <BR>
+  <BR>
+  <div>
+  <div class="col-md-12">
+      <div class="card card-dark">
+        <div class="card-header">
+          <h1 class="card-title" style="text-align:center">Gráfico de voluntarios</h1>
+        </div>
+        <div class="container">
+    <h3 class="text-center">Estadísticas de voluntarios</h3>
+    <canvas id="voluntariosChart" width="20" height="10"></canvas>
+</div>
 
   <footer>
     <?php include 'plantillafooter.php'; ?>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
-    document.getElementById('btn-guardar').addEventListener('click', function() {
-      Swal.fire({
-        icon: 'info',
-        title: 'Funcionalidad no disponible',
-        text: 'La opción de guardar un nuevo Voluntario aún no está disponible.'
-      });
-    });
-
-    document.getElementById('btn-guardar-cambios').addEventListener('click', function() {
-      Swal.fire({
-        icon: 'info',
-        title: 'Funcionalidad no disponible',
-        text: 'La opción de guardar los cambios aún no está disponible.'
-      });
-    });
-
-    document.querySelectorAll('.btn-eliminar').forEach(button => {
-      button.addEventListener('click', function() {
-        Swal.fire({
-          icon: 'info',
-          title: 'Funcionalidad no disponible',
-          text: 'La opción de eliminar un Voluntario aún no está disponible.'
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('../controller/ADMvoluntariosController.php?op=obtener_estadisticas')
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.map(item => item.residencia);
+            const values = data.map(item => item.cantidad);
+            
+            const ctx = document.getElementById('voluntariosChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Cantidad de voluntarios',
+                        data: values,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
         });
-      });
-    });
-
-    function showEditVoluntario(voluntarioId) {
-      const data = {
-        idVoluntarios: voluntarioId,
-        nombre: 'John',
-        apellido: 'Doe',
-        telefono: '123456789',
-        correo: 'john.doe@example.com',
-        como_ayudar: 'Transporte'
-      };
-
-      document.getElementById('edit-voluntario-id').value = data.idVoluntarios;
-      document.getElementById('editNombre').value = data.nombre;
-      document.getElementById('editApellidos').value = data.apellido;
-      document.getElementById('editTelefono').value = data.telefono;
-      document.getElementById('editCorreo').value = data.correo;
-      document.getElementById('editAyuda').value = data.como_ayudar;
-
-      const editModal = new bootstrap.Modal(document.getElementById('editarVoluntario'));
-      editModal.show();
-    }
-
-    function hideEditVoluntario() {
-      const editModal = new bootstrap.Modal(document.getElementById('editarVoluntario'));
-      editModal.hide();
-
-      <script>
-    document.getElementById('Guardar').addEventListener('click', function() {
-    document.querySelectorAll('.form-control').forEach(input => input.value = '');
-    document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-    alert('Información enviada, gracias por contar con nosotros');
-    });
-    </script>
-
-    }
-
-    
-    
-  </script>
-
+});
+</script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="plugins/DataTables/datatables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/bootbox/bootbox.min.js"></script>
+  <script src="plugins/toastr/toastr.js"></script>
+  <script src="assets/js/ADMvoluntarios.js"></script>
 </body>
-
 </html>
