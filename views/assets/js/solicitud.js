@@ -1,80 +1,46 @@
+$(document).ready(function () {
+  $('#solicitudForm').on('submit', function (e) {
+    e.preventDefault(); // Evita el envío tradicional del formulario
 
-
-document.getElementById('solicitarBtn').addEventListener('click', function() {
-
-
-  // ids de los campos que tienen que estar llenos
-  const camposObligatorios = [
-      'inputNombre', 'inputApellido', 'exampleInputEmail1', 
-      'inputNumeroINT','inputApellidofam','inputninos','inputadolentes','inputAdultos',
-      'inputprovincia','inputCanton' 
-  ];
-
-
-  let todosCamposLlenos = true;
-
-
-
-
-  // verificar que todos los campos esten llenos
-  for (let id of camposObligatorios) {
-      const campo = document.getElementById(id);
-      if (!campo.value.trim()) {
-          todosCamposLlenos = false;
-          break;
-      }
-  }
-
-
-
-  // verificar si al menos una opción de ayuda está seleccionada
-  const opcionesAyuda = document.querySelectorAll('input[type="checkbox"][value^="option"]');
-  let ayudaSeleccionada = false;
-  for (let opcion of opcionesAyuda) {
-      if (opcion.checked) {
-          ayudaSeleccionada = true;
-          break;
-      }
-  }
-
-
-
-  // verificar si los términos y condiciones esta marcado
-  const terminosAceptados = document.getElementById('defaultCheck1').checked;
-
-  if (todosCamposLlenos && ayudaSeleccionada && terminosAceptados) {
-    document.getElementById('solicitarBtn').addEventListener('click', function () {
-      document.querySelectorAll('.form-control').forEach(input => input.value = '');
-      document.querySelectorAll('.form-check-input').forEach(checkbox => checkbox.checked = false);
-  Swal.fire({
-    icon: "success",
-    title: "Información enviada, gracias por contar con nosotros"
-  });
-  });
-  } else {
-    Swal.fire({
-      icon: "error",
-      title: "Por favor, complete todos los campos, seleccione al menos una opción de ayuda y acepte los términos y condiciones."
+    var formData = $(this).serializeArray();
+    var ayuda = [];
+    $('.ayuda:checked').each(function() {
+      ayuda.push($(this).val());
     });
+
+    var data = formData.reduce(function(acc, field) {
+      acc[field.name] = field.value;
+      return acc;
+    }, {});
+    data['ayuda'] = ayuda.join(',');
+
+    $.ajax({
+      url: $(this).attr('action'),
+      type: 'POST',
+      data: data,
+      dataType: 'json',
+      success: function (response) {
+        if (response.exito) {
+          Swal.fire({
+              icon: 'success',
+              title: '¡Éxito!',
+              text: response.msg
+          });
+      } else {
+          Swal.fire({
+              icon: 'error',
+              title: '¡Error!',
+              text: response.msg
+          });
+      }
+  },
+  error: function(xhr, status, error) {
+      Swal.fire({
+          icon: 'error',
+          title: '¡Error!',
+          text: 'Error al procesar la solicitud.'
+      });
   }
 });
-
-sr.reveal('.imgin', {
-  duration: 3500,
 });
-sr.reveal('.informacion', {
-  duration: 3500,
-  reset: true
 });
-
-sr.reveal('.ayudas', {
-  delay:1000,
-  duration: 3500,
-  origin: 'bottom',
-    distance:'40px',
-  reset: true
-});
-
-
-
-

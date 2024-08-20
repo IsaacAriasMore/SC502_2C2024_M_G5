@@ -1,43 +1,41 @@
 <?php
+require_once '../models/SolicitudModel.php';
 
+$nombre = isset($_POST["nombre"]) ? $_POST["nombre"] : "";
+$apellidos = isset($_POST["apellidos"]) ? $_POST["apellidos"] : "";
+$telefono = isset($_POST["telefono"]) ? $_POST["telefono"] : "";
+$ayuda = isset($_POST["ayuda"]) ? $_POST["ayuda"] : "";
+$familiar = isset($_POST["familiar"]) ? $_POST["familiar"] : "";
+$integrantes = isset($_POST["integrantes"]) ? $_POST["integrantes"] : "";
+$ninos = isset($_POST["ninos"]) ? $_POST["ninos"] : "";
+$adolecentes = isset($_POST["adolecentes"]) ? $_POST["adolecentes"] : "";
+$adultos = isset($_POST["adultos"]) ? $_POST["adultos"] : "";
+$provincia = isset($_POST["provincia"]) ? $_POST["provincia"] : "";
+$canton = isset($_POST["canton"]) ? $_POST["canton"] : "";
+$destino = isset($_POST["destino"]) ? $_POST["destino"] : "";
+$estado = isset($_POST["estado"]) ? $_POST["estado"] : "0";
 
-    require_once '../models/SolicitudModel.php';
-    $nombre = (isset($_POST["nombre"])) ? $_POST["nombre"] : "";
-    $apellido = (isset($_POST["apellido"])) ? $_POST["apellido"] : "";
-    $Telefono = (isset($_POST["Telefono"])) ? $_POST["Telefono"] : "";
-    $Ayuda = (isset($_POST["Hora"])) ? $_POST["Hora"] : "";
-    $ApellidoFamiliar = (isset($_POST["ApellidoFamiliar"])) ? $_POST["ApellidoFamiliar"] : "";
-    $NumIntegrantes = (isset($_POST["Mascota"])) ? $_POST["Mascota"] : "";
-    $Niños = (isset($_POST["Niños"])) ? $_POST["Niños"] : "";
-    $Adolescentes = (isset($_POST["Adolescentes"])) ? $_POST["Adolescentes"] : "";
-    $Adultos = (isset($_POST["Adultos"])) ? $_POST["Adultos"] : "";
-    $Provincia = (isset($_POST["Provincia"])) ? $_POST["Provincia"] : "";
-    $Canton = (isset($_POST["Canton"])) ? $_POST["Canton"] : "";
-    $Destino = (isset($_POST["Destino"])) ? $_POST["Destino"] : "";
-    
-    $Solicitud = new SolicitudModel();
-    $Solicitud->setNombre($nombre);
-    $Solicitud->setapellido($apellido);
-    $Solicitud->setTelefono($Telefono);
-    $Solicitud->setAyuda($Ayuda);
-    $Solicitud->setApellidoFamiliar($ApellidoFamiliar);
-    $Solicitud->setNumIntegrantes($NumIntegrantes);
-    $Solicitud->setNiños($Niños);
-    $Solicitud->setAdolescentes($Adolescentes);
-    $Solicitud->setAdultos($Adultos);
-    $Solicitud->setProvincia($Provincia);
-    $Solicitud->setCanton($Canton);
-    $Solicitud->setDestino($Destino);
-    
-    try {
-        $cita->guardarconOO();
-        $resp = array("exito"=> true,"msg"=>"Cita insertada correctamente");
-        echo json_encode($resp);
-    } catch (PDOException $th) {
-        $resp = array("exito"=> false,"msg"=>"Se presento un error");
-        echo json_encode($resp);
-    }
-    
-    
+$Solicitud = new SolicitudModel();
+$Solicitud->setNombre($nombre);
+$Solicitud->setApellidos($apellidos);
+$Solicitud->setTelefono($telefono);
+$Solicitud->setAyuda($ayuda);
+$Solicitud->setFamiliar($familiar);
+$Solicitud->setIntegrantes($integrantes);
+$Solicitud->setNinos($ninos);
+$Solicitud->setAdolecentes($adolecentes);
+$Solicitud->setAdultos($adultos);
+$Solicitud->setProvincia($provincia);
+$Solicitud->setCanton($canton);
+$Solicitud->setDestino($destino);
+$Solicitud->setEstado($estado);
 
+try {
+    $Solicitud->guardar();
+    $resp = array("exito" => true, "msg" => "Datos guardados correctamente.");
+    echo json_encode($resp);
+} catch (PDOException $th) {
+    $resp = array("exito" => false, "msg" => "Error al guardar los datos: " . $th->getMessage());
+    echo json_encode($resp);
+}
 ?>
