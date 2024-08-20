@@ -193,53 +193,11 @@
   <br>
   <br>
   <div>
-    <div class="col-md-12">
-      <div class="card card-dark">
-        <div class="card-header">
-          <h1 class="card-title" style="text-align:center">Gráfico de Actividades</h1>
-        </div>
-        <div class="container">
-          <h3 class="text-center">Estadísticas de Actividades</h3>
-          <canvas id="actividadesChart" width="20" height="10"></canvas>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <footer>
     <?php include 'plantillafooter.php'; ?>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <script>
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('../controller/ADMactividadesController.php?op=obtener_estadisticas')
-        .then(response => response.json())
-        .then(data => {
-            const labels = data.map(item => `Estado ${item.estado}`);
-            const values = data.map(item => item.cantidad);
-            
-            const ctx = document.getElementById('actividadesChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Cantidad de Actividades',
-                        data: values,
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        });
-});
 </script>
   <script src="plugins/jquery/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

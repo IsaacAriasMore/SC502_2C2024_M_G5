@@ -232,68 +232,40 @@ public function desactivar() {
     }
 
     public function actualizarDonacion() {
-        $query = "UPDATE donaciones SET nombre=:nombre, apellidos=:apellidos, telefono=:telefono, donacion=:donacion, total=:total, metodoPago=:metodoPago, numero=:numero WHERE id=:id";
+        $query = "UPDATE donaciones SET nombre=:nombre, apellidos=:apellidos, telefono=:telefono, email=:email, donacion=:donacion, total=:total, metodoPago=:metodoPago, numero=:numero WHERE id=:id";
         try {
             self::getConexion();
             $id = $this->getId();
             $nombre = $this->getNombre();
             $apellidos = $this->getApellidos();
             $telefono = $this->getTelefono();
+            $email = $this->getEmail();
             $donacion = $this->getDonacion();
             $total = $this->getTotal();
             $metodoPago = $this->getMetodoPago();
             $numero = $this->getNumero();
     
             $resultado = self::$cnx->prepare($query);
+            $resultado->bindParam(":id", $id, PDO::PARAM_INT);
             $resultado->bindParam(":nombre", $nombre, PDO::PARAM_STR);
             $resultado->bindParam(":apellidos", $apellidos, PDO::PARAM_STR);
             $resultado->bindParam(":telefono", $telefono, PDO::PARAM_STR);
+            $resultado->bindParam(":email", $email, PDO::PARAM_STR);
             $resultado->bindParam(":donacion", $donacion, PDO::PARAM_STR);
             $resultado->bindParam(":total", $total, PDO::PARAM_STR);
             $resultado->bindParam(":metodoPago", $metodoPago, PDO::PARAM_STR);
             $resultado->bindParam(":numero", $numero, PDO::PARAM_STR);
-            $resultado->bindParam(":id", $id, PDO::PARAM_INT);
-            self::$cnx->beginTransaction();
             $resultado->execute();
-            self::$cnx->commit();
             self::desconectar();
-            return $resultado->rowCount();
-        } catch (PDOException $Exception) {
-            self::$cnx->rollBack();
-            self::desconectar();
-            $error = "Error ".$Exception->getCode().": ".$Exception->getMessage();
-            return $error;
-        }
-    }
-
-        
-
-    public function verificarExistenciaEmail(){
-        $query = "SELECT email, id, nombre, apellidos, telefono FROM donaciones where email=:email and estado =1";
-        try {
-        self::getConexion();
-        $resultado = self::$cnx->prepare($query);		
-        $email= $this->getEmail();		
-        $resultado->bindParam(":email",$email,PDO::PARAM_STR);
-        $resultado->execute();
-        self::desconectar();
-        $encontrado = false;
-        $arr=array();
-        foreach ($resultado->fetchAll() as $reg) {
-            $arr[]=$reg['id'];
-            $arr[]=$reg['email'];   
-            $arr[]=$reg['nombre'];  
-            $arr[]=$reg['apellidos']; 
-            $arr[]=$reg['telefono'];  
-        }
-        return $arr;
-        return $encontrado;
+    
+            return $resultado->rowCount(); 
         } catch (PDOException $Exception) {
             self::desconectar();
             $error = "Error ".$Exception->getCode().": ".$Exception->getMessage();
-        return $error;
+            return json_encode($error);
         }
-    }
+    } 
+
     public function obtenerEstadisticasDonaciones() {
         $query = "SELECT donacion, COUNT(*) AS cantidad FROM donaciones GROUP BY donacion";
         try {

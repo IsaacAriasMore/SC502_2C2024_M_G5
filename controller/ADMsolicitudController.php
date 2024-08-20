@@ -23,7 +23,7 @@ switch ($_GET["op"]) {
                     "10" => $reg->getProvincia(),
                     "11" => $reg->getCanton(),
                     "12" => $reg->getDestino(),
-                    "13" => ($reg->getEstado() == 1) ? '<span class="label bg-success"> Activado </span>' : '<span class="label bg-danger"> Desactivado </span>',
+                    "13" => ($reg->getEstado()) ? '<span class="label bg-success"> Activado </span>' : '<span class="label bg-danger"> Desactivado </span>',
                     "14" => ($reg->getEstado()) ? 
                         '<button class="btn btn-warning" id="modificarSolicitud">Modificar</button>'.
                         '<button class="btn btn-danger" onclick="desactivar(\''.$reg->getId().'\')">Desactivar</button>' : 
@@ -98,12 +98,13 @@ switch ($_GET["op"]) {
         echo $rspta ? 1 : 0; // 1: éxito, 0: error
         break;
 
-    case 'desactivar':
-        $ul = new ADMsolicitudModel();
-        $ul->setId(trim($_POST['id']));
-        $rspta = $ul->desactivar();
-        echo $rspta ? 1 : 0; // 1: éxito, 0: error
-        break;
+        case 'desactivar':
+            $ul = new ADMsolicitudModel(); // Asegúrate de que estás usando la clase correcta
+            $ul->setId(trim($_POST['id']));
+            $rspta = $ul->desactivar();
+            echo $rspta; // Esto debería devolver '1' si el desactivado fue exitoso
+            break;
+        
 
     case 'mostrar':
         $telefono = $_POST["telefono"] ?? "";
@@ -136,6 +137,7 @@ switch ($_GET["op"]) {
         $provincia = trim($_POST["provincia"] ?? "");
         $canton = trim($_POST["canton"] ?? "");
         $destino = trim($_POST["destino"] ?? "");
+        
 
         $solicitud_model = new ADMsolicitudModel();
         $solicitud_model->setId($id);

@@ -130,12 +130,6 @@ switch ($_GET["op"]) {
         echo $modificados > 0 ? 1 : 0;
         break;
         
-    case 'obtener_estadisticas':
-        ADMactividadesModel::getConexion();
-        $model = new ADMactividadesModel();
-        $result = $model->obtenerEstadisticas();
-        ADMactividadesModel::desconectar();
-        echo json_encode($result);
-        break;
+
 }
 ?>

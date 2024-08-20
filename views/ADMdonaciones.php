@@ -176,23 +176,13 @@
                         <option value="sinpe">SINPE Móvil</option>
                       </select>
                     </div>
-                  </div>
                 <div class="form-group">
                                             <label for="Enumero">Numero</label>
                                             <input type="text" class="form-control" id="Enumero"
                                                 name="numero" required>
                                         </div>
                                     </div>
-                                     <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="estado">Estado en el sistema</label>
-                                            <select name="estado" id="estado" class="form-control">
-                                                <option value="1" selected>Activado</option>
-                                                <option value="0">Desactivado</option>
-                                            </select>
-                                        </div>
                                     </div>
-                                </div>
                 <div class="row">
                   <div class="form-group col-md-6">
                     <input type="submit" class="form-control btn btn-warning" value="Modificar">

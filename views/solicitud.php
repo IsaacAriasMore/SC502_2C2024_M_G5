@@ -74,6 +74,10 @@
                     <input class="form-check-input ayuda" type="checkbox" id="hospedaje" value="hospedaje">
                     <label class="form-check-label" for="hospedaje">Hospedaje</label>
                 </div>
+                <div class="form-check">
+                    <input class="form-check-input ayuda" type="checkbox" id="otros" value="otros">
+                    <label class="form-check-label" for="otros">otros</label>
+                </div>
             </div>
         </div>
 
@@ -125,7 +129,7 @@
                 <select id="destino" class="form-select" name="destino">
                     <option selected value="panama">Frontera Panamá</option>
                     <option value="nicaragua">Frontera Nicaragua</option>
-                    <option value="otros">Quedarse a vivir aquí</option>
+                    <option value="costa rica">Quedarse a vivir aquí</option>
                 </select>
             </div>
 

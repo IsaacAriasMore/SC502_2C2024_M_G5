@@ -64,7 +64,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="familiar">Familiar</label>
+                      <label for="familiar">Apellido Familiar</label>
                       <input type="text" class="form-control" id="familiar" name="familiar" required>
                     </div>
                   </div>
@@ -181,7 +181,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="Efamiliar">Familiar</label>
+                      <label for="Efamiliar">Apellido Familiar</label>
                       <input type="text" class="form-control" id="Efamiliar" name="familiar" required>
                     </div>
                   </div>

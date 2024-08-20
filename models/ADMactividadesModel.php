@@ -232,19 +232,5 @@ class ADMactividadesModel extends Conexion
         }
     }
 
-    public function obtenerEstadisticasActividades() {
-        $query = "SELECT fecha, COUNT(*) AS cantidad FROM actividades GROUP BY fecha";
-        try {
-            self::getConexion();
-            $resultado = self::$cnx->prepare($query);
-            $resultado->execute();
-            self::desconectar();
-            return $resultado->fetchAll(PDO::FETCH_ASSOC);
-        } catch (PDOException $Exception) {
-            self::desconectar();
-            $error = "Error ".$Exception->getCode().": ".$Exception->getMessage();
-            return json_encode($error);
-        }
-    }
 }
 ?>

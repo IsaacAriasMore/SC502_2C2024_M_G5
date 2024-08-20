@@ -105,7 +105,7 @@ function desactivar(id) {
     bootbox.confirm('¿Está seguro de desactivar esta donación?', function (result) {
         if (result) {
             $.post(
-                '../controller/ADMsolictudController.php?op=desactivar',
+                '../controller/ADMsolicitudController.php?op=desactivar',
                 { id: id },
                 function (data) {
                     switch (data) {
