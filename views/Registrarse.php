@@ -47,7 +47,7 @@
     <input type="password" id="contrasena" name="contrasena" required><br><br>
 
     <input type="hidden" id="id_cargo" name="id_cargo" value="2">
-    <input type="hidden" id="estado" name="estado" value="0">
+    <input type="hidden" id="estado" name="estado" value="1">
    
 
     <button type="submit" class="boton btn btn-success"  style="margin-left:330px">Registrarse</button>

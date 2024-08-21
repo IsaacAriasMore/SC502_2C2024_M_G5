@@ -77,9 +77,9 @@ switch ($_GET["op"]) {
             $solicitud->setEstado($estado);
             $solicitud->guardarEnDb();
             $encontrado = $solicitud->verificarExistenciaDb();
-            echo $encontrado ? 1 : 3; // 1: éxito, 3: error al guardar
+            echo $encontrado ? 1 : 3; 
         } else {
-            echo 2; // La solicitud ya existe
+            echo 2; 
         }
         break;
 
@@ -95,14 +95,14 @@ switch ($_GET["op"]) {
         $ul = new ADMsolicitudModel();
         $ul->setId(trim($_POST['id']));
         $rspta = $ul->activar();
-        echo $rspta ? 1 : 0; // 1: éxito, 0: error
+        echo $rspta ? 1 : 0; 
         break;
 
         case 'desactivar':
-            $ul = new ADMsolicitudModel(); // Asegúrate de que estás usando la clase correcta
+            $ul = new ADMsolicitudModel(); 
             $ul->setId(trim($_POST['id']));
             $rspta = $ul->desactivar();
-            echo $rspta; // Esto debería devolver '1' si el desactivado fue exitoso
+            echo $rspta; // devolver '1' si el desactivado fue exitoso
             break;
         
 
@@ -119,7 +119,7 @@ switch ($_GET["op"]) {
                 ]
             ]);
         } else {
-            echo 0; // No encontrado
+            echo 0; 
         }
         break;
 
@@ -155,7 +155,7 @@ switch ($_GET["op"]) {
         $solicitud_model->setDestino($destino);
 
         $modificados = $solicitud_model->actualizarSolicitud();
-        echo $modificados > 0 ? 1 : 0; // 1: éxito, 0: error
+        echo $modificados > 0 ? 1 : 0; 
         break;
 
      case 'obtener_estadisticas':

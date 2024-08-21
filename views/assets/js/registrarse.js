@@ -33,7 +33,7 @@ $('#usuario_add').on('submit', function (event) {
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
-                text: 'Hubo un error al procesar la solicitud'
+                text: 'Hubo un error al procesar el registro'
             });
             $('#btnRegistar').removeAttr('disabled');
         }

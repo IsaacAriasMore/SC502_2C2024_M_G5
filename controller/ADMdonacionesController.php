@@ -62,7 +62,7 @@ switch ($_GET["op"]) {
         $usuario->setNumero($numero);
         $usuario->setEstado($estado);
         $usuario->guardarEnDb();
-        echo 1; // Suponiendo que guardarEnDb() funciona correctamente
+        echo 1; 
         break;
 
     case 'activar':

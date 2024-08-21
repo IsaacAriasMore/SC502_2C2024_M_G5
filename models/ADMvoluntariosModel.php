@@ -187,7 +187,7 @@ public function activar() {
         $resultado->execute();
         self::$cnx->commit();
         self::desconectar();
-        return $resultado->rowCount(); // Devuelve el número de filas afectadas
+        return $resultado->rowCount(); 
     } catch (PDOException $Exception) {
         self::$cnx->rollBack();
         self::desconectar();
@@ -207,7 +207,7 @@ public function desactivar() {
         $resultado->execute();
         self::$cnx->commit();
         self::desconectar();
-        return $resultado->rowCount(); // Devuelve el número de filas afectadas
+        return $resultado->rowCount(); 
     } catch (PDOException $Exception) {
         self::$cnx->rollBack();
         self::desconectar();
@@ -333,7 +333,5 @@ public function desactivar() {
         }
     }
 }
-        
-    /*=====  End of Metodos de la Clase  ======*/  
 
 ?>

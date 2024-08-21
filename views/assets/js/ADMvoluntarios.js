@@ -100,7 +100,7 @@ function activar(id) {
 
 /* Función para eliminar una donación */
 function desactivar(id) {
-    bootbox.confirm('¿Está seguro de desactivar este voluntario?', function (result) {
+    bootbox.confirm('¿Está seguro de desactivar el voluntario?', function (result) {
         if (result) {
             $.post(
                 '../controller/ADMvoluntariosController.php?op=desactivar',

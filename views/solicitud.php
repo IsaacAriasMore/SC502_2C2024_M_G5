@@ -19,7 +19,7 @@
 <br>
 <nav class="navbaruserR navbar navbar-expand-lg bg-body-tertiary fixed-top"data-bs-theme="dark">
   <div class="container-fluid">
-  <a class="navbar-brand" href="cliente.php">
+  <a class="navbar-brand" href="./cliente.php">
                     <img src="./assets/img/Logo.png" style="height: 80px; width: 80px" alt="Logo">
                     <strong>INMIGRAWEB</strong>
                 </a>
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="cliente.php">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="./cliente.php">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./donaciones.php">Donaciones</a>
@@ -49,11 +49,6 @@
             </a>
           </li>
       </ul>
-
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="bus">
-        <button class="btn btn-outline-success" id="btn" onclick="return buscador();">Search</button>
-      </form>
     </div>
   </div>
 </nav>

@@ -14,7 +14,7 @@
 <body>
 <nav class="navbaruserad navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.php" style="text-align:center">
+            <a class="navbar-brand" href="../login.php" style="text-align:center">
                 <img src="./assets/img/Logo.png" style="height: 80px; width: 80px" alt="Logo" style="text-align:center">
             </a>
 

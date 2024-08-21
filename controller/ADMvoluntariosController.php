@@ -63,12 +63,12 @@ switch ($_GET["op"]) {
                 $usuario->setEstado($estado);
                 $usuario->guardarEnDb();
                 if ($usuario->verificarExistenciaDb()) {
-                    echo 1; // Usuario registrado exitosamente
+                    echo 1; 
                 } else {
-                    echo 3; // Fallo al realizar el registro
+                    echo 3;
                 }
             } else {
-                echo 2; // El usuario ya existe
+                echo 2; 
             }
             break;        
         

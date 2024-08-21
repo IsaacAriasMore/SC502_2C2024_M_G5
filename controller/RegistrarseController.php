@@ -6,7 +6,7 @@
    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
    $id_cargo = isset($_POST['id_cargo']) ? $_POST['id_cargo'] : '2';
-   $estado = isset($_POST['estado']) ? $_POST['estado'] : '';
+   $estado = isset($_POST['estado']) ? $_POST['estado'] : '1';
 
    $fecharegistro = date('Y-m-d');
 

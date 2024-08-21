@@ -161,17 +161,17 @@ class ADMregistrarseModel extends Conexion {
     }
     
     public function activar() {
-        $id = $this->getId();  // Assign the result to a variable
+        $id = $this->getId();  
         $query = "UPDATE usuarios SET estado='1' WHERE id=:id";
         try {
             self::getConexion();
             $resultado = self::$cnx->prepare($query);
-            $resultado->bindParam(":id", $id, PDO::PARAM_INT);  // Use the variable here
+            $resultado->bindParam(":id", $id, PDO::PARAM_INT);  
             self::$cnx->beginTransaction();
             $resultado->execute();
             self::$cnx->commit();
             self::desconectar();
-            return $resultado->rowCount(); // Devuelve el número de filas afectadas
+            return $resultado->rowCount(); 
         } catch (PDOException $Exception) {
             self::$cnx->rollBack();
             self::desconectar();
@@ -181,17 +181,17 @@ class ADMregistrarseModel extends Conexion {
     }
     
     public function desactivar() {
-        $id = $this->getId();  // Assign the result to a variable
+        $id = $this->getId();  
         $query = "UPDATE usuarios SET estado='0' WHERE id=:id";
         try {
             self::getConexion();
             $resultado = self::$cnx->prepare($query);
-            $resultado->bindParam(":id", $id, PDO::PARAM_INT);  // Use the variable here
+            $resultado->bindParam(":id", $id, PDO::PARAM_INT);  
             self::$cnx->beginTransaction();
             $resultado->execute();
             self::$cnx->commit();
             self::desconectar();
-            return $resultado->rowCount(); // Devuelve el número de filas afectadas
+            return $resultado->rowCount(); 
         } catch (PDOException $Exception) {
             self::$cnx->rollBack();
             self::desconectar();
@@ -265,7 +265,7 @@ class ADMregistrarseModel extends Conexion {
                 $resultado->execute();
                 self::$cnx->commit();
                 self::desconectar();
-                return $resultado->rowCount(); // Devuelve el número de filas afectadas
+                return $resultado->rowCount(); 
             } catch (PDOException $Exception) {
                 self::$cnx->rollBack();
                 self::desconectar();

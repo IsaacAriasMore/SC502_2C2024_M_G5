@@ -34,18 +34,17 @@
                         <a class="nav-link" href="./ADMsolicitud.php">Solicitud Ayudas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./ADMvoluntarios.php">Quiero ser Voluntario</a>
+                        <a class="nav-link" href="./ADMvoluntarios.php">Voluntarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ADMregistrarse.php">Usuarios</a>
                     </li>
                     <li class="login nav-item d-flex" style="margin-left: 30px;">
-                        <a href="login.php" class="user-icon-link">
+                        <a href="./login.php" class="user-icon-link">
                             <img src="./assets/img/usuario.png" style="height: 50px; width: 50px" alt="Usuario">
                         </a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="bus">
-                    <button class="btn btn-outline-success" id="btn" onclick="return buscador();">Search</button>
-                </form>
             </div>
         </div>
     </nav>

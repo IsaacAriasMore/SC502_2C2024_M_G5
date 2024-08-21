@@ -76,7 +76,7 @@ $('#solicitud_add').on('submit', function (event) {
 /* Función para activar una solicitud */
 // Función para activar una solicitud
 function activar(id) {
-    bootbox.confirm('¿Está seguro de activar la donación?', function (result) {
+    bootbox.confirm('¿Está seguro de activar la solicitud?', function (result) {
       if (result) {
         $.post(
           '../controller/ADMsolicitudController.php?op=activar',
@@ -84,11 +84,11 @@ function activar(id) {
           function (data) {
             switch (data) {
               case '1':
-                toastr.success('Donación activada');
+                toastr.success('Solicitud activada');
                 tabla.ajax.reload();
                 break;
               case '0':
-                toastr.error('Error: La donación no puede activarse. Consulte con el administrador...');
+                toastr.error('Error: La solicitud no puede activarse. Consulte con el administrador...');
                 break;
               default:
                 toastr.error(data);
@@ -102,7 +102,7 @@ function activar(id) {
 
 /* Función para eliminar una donación */
 function desactivar(id) {
-    bootbox.confirm('¿Está seguro de desactivar esta donación?', function (result) {
+    bootbox.confirm('¿Está seguro de desactivar la solicitud?', function (result) {
         if (result) {
             $.post(
                 '../controller/ADMsolicitudController.php?op=desactivar',
@@ -110,11 +110,11 @@ function desactivar(id) {
                 function (data) {
                     switch (data) {
                         case '1':
-                            toastr.success('Donación desactivada');
+                            toastr.success('solicitud desactivada');
                             tabla.ajax.reload();
                             break;
                         case '0':
-                            toastr.error('Error: No se pudo desactivar la donación.');
+                            toastr.error('Error: No se pudo desactivar la solicitud.');
                             break;
                         default:
                             toastr.error(data);

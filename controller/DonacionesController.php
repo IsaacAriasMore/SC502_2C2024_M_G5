@@ -24,7 +24,7 @@
 
     try {
         $persona->guardar();
-        $resp = array("exito"=> true,"msg"=>"Persona insertada correctamente");
+        $resp = array("exito"=> true,"msg"=>"Donacion insertada correctamente");
         echo json_encode($resp);
     } catch (PDOException $th) {
         $resp = array("exito"=> false,"msg"=>"Se presento un error");

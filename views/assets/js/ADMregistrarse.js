@@ -54,12 +54,12 @@ $('#registrarse_add').on('submit', function (event) {
         success: function (datos) {
             switch (datos) {
                 case '1':
-                    toastr.success('Usuario registrada');
+                    toastr.success('Usuario registrado');
                     $('#registrarse_add')[0].reset();
                     tabla.ajax.reload();
                     break;
                 case '2':
-                    toastr.error('La registrarse ya existe. Corrija e inténtelo nuevamente.');
+                    toastr.error('El usuario ya existe. Corrija e inténtelo nuevamente.');
                     break;
                 case '3':
                     toastr.error('Hubo un error al tratar de ingresar los datos.');
@@ -75,7 +75,7 @@ $('#registrarse_add').on('submit', function (event) {
 
 
 function activar(id) {
-    bootbox.confirm('¿Está seguro de activar la donación?', function (result) {
+    bootbox.confirm('¿Está seguro de activar el usuario?', function (result) {
       if (result) {
         $.post(
           '../controller/ADMregistrarseController.php?op=activar',

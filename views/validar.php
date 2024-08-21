@@ -25,7 +25,7 @@ if (!$conexion) {
     die("Error en la conexión: " . mysqli_connect_error());
 }
 
-// Preparar y ejecutar la consulta
+// preparar y ejecutar la consulta
 $stmt = mysqli_prepare($conexion, "SELECT id_cargo FROM usuarios WHERE usuario = ? AND contrasena = ?");
 mysqli_stmt_bind_param($stmt, "ss", $usuario, $contrasena);
 mysqli_stmt_execute($stmt);
@@ -41,7 +41,7 @@ if ($id_cargo == 1) { // Administrador
     header("Location: cliente.php");
     exit();
 } else {
-    // No hay usuario con el cargo 1 ni 2
+    // no hay usuario con el cargo 1 ni 2
     echo '<!DOCTYPE html>
     <html>
     <head>
