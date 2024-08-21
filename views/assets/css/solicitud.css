@@ -11,10 +11,10 @@ object-fit: cover;
     color: rgb(0, 0, 0);
 }
 .txtt{
-    max-width: 800px; /* Ajusta el tamaño máximo según tus necesidades */
-    margin: 0 auto;  /* Centra el párrafo horizontalmente */
-    padding: 20px;   /* Añade un poco de padding si es necesario */
-    font-size: 16px; /* Ajusta el tamaño de fuente si es necesario */
+    max-width: 800px; 
+    margin: 0 auto;  
+    padding: 20px;   
+    font-size: 16px; 
     line-height: 1.6;
 }
 h1{
@@ -51,7 +51,7 @@ p {
 
 .dividor{
     width: 1px;
-    background-color: #60606098; /* Color de la línea */
+    background-color: #60606098; 
     margin: 0 10px;
 }
 .terminos{

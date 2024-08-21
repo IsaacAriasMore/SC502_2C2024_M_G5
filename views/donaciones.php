@@ -11,7 +11,50 @@
 
 <body>
   <div id="response"></div>
-  <?php include 'plantilla.php'; ?>
+  <br>
+<br>
+<br>
+<br>
+<nav class="navbaruserR navbar navbar-expand-lg bg-body-tertiary fixed-top"data-bs-theme="dark">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="cliente.php">
+                    <img src="./assets/img/Logo.png" style="height: 80px; width: 80px" alt="Logo">
+                    <strong>INMIGRAWEB</strong>
+                </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="cliente.php">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./donaciones.php">Donaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./actividades.php">Actividades</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./solicitud.php">Solicitud Ayudas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./voluntarios.php">Quiero ser Voluntario</a>
+        </li>
+        <li class="login nav-item d-flex" style="margin-left: 30px;">
+            <a href="./login.php">
+              <img src="./assets/img/usuario.png" class="nav-link" style="height: 50px; width: 50px" alt="Logo">
+            </a>
+          </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="bus">
+        <button class="btn btn-outline-success" id="btn" onclick="return buscador();">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
   <aside class="iz" style="margin-top: 0px; background-color: #04282c; float: left; width: 380px; height: 1350px; text-align: center; align-items: center;">
     <br>
     <h1 class="titulo1" style="margin-top: 100px">DONACIONES PERMITIDAS</h1>
@@ -24,7 +67,6 @@
     <br>
   </aside>
 
-  <h1>Donaciones</h1>
   <div class="iniciov" style="margin-top:90px; align-content:center;">
     <br>
     <h1 class="text-center" style="text-align: center; text-shadow: 1px 1px 1px grey;">Como realizar la donación</h1>

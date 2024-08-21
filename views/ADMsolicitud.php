@@ -12,11 +12,52 @@
 </head>
 
 <body>
-  <?php include 'plantilla.php'; ?>
-  <br>
-  <br>
-  <br>
-  <br>
+<br>
+<br>
+<br>
+<br>
+<nav class="navbaruserad navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.php">
+                <img src="./assets/img/Logo.png" style="height: 80px; width: 80px" alt="Logo">
+                <strong>INMIGRAWEB ADMIN</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.php">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ADMdonaciones.php">Donaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ADMactividades.php">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ADMsolicitud.php">Solicitud Ayudas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ADMvoluntarios.php">Voluntarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ADMregistrarse.php">Usuarios</a>
+                    </li>
+                    <li class="login nav-item d-flex" style="margin-left: 30px;">
+                        <a href="./Iniciar_Sesion.php" class="user-icon-link">
+                            <img src="./assets/img/usuario.png" style="height: 50px; width: 50px" alt="Usuario">
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="bus">
+                    <button class="btn btn-outline-success" id="btn" onclick="return buscador();">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
   <div class="row">
     <!-- Formulario de creación de solicitud -->
     <div class="col-md-12" id="formulario_add">

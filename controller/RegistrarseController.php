@@ -1,38 +1,35 @@
+
 <?php
-require_once '../config/conexion.php';
-require_once '../models/RegisterModel.php';
+   require_once '../models/RegisterModel.php';
+   $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+   $usuario = isset($_POST['usuario']) ? $_POST['usuario'] : '';
+   $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
+   $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
+   $id_cargo = isset($_POST['id_cargo']) ? $_POST['id_cargo'] : '2';
+   $estado = isset($_POST['estado']) ? $_POST['estado'] : '';
 
-header('Content-Type: application/json');
+   $fecharegistro = date('Y-m-d');
 
-$response = ['success' => false, 'message' => ''];
+    $persona = new RegisterModel();
+    $persona->setNombre($nombre);
+    $persona->setUsuario($usuario);
+    $persona->setCorreo($correo);
+    $persona->setContrasena($contrasena);
+    $persona->setFecharegistro($fecharegistro);
+    $persona->setId_cargo($id_cargo);
+    $persona->setEstado($estado);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener datos del formulario
-    $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-    $apellido = isset($_POST['apellidos']) ? $_POST['apellidos'] : '';
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $telefono = isset($_POST['telefono']) ? $_POST['telefono'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
-
-    // Validar datos
-    if (empty($nombre) || empty($apellido) || empty($correo) || empty($telefono) || empty($contrasena)) {
-        $response['message'] = 'Todos los campos son requeridos.';
-    } else {
-        // Conectar a la base de datos
-        $db = Conexion::conectar();
-        $model = new RegisterModel($db);
-
-        // Registrar usuario
-        if ($model->registrar($nombre, $apellido, $correo, $telefono, $contrasena)) {
-            $response['success'] = true;
-            $response['message'] = 'Registro exitoso.';
-        } else {
-            $response['message'] = 'Error al registrar el usuario.';
+    try {
+        if ($persona->verificarExistenciaDb()) {
+            echo json_encode(["exito" => false, "msg" => "El correo o el usuario ya existen"]);
+            exit;
         }
+        
+        $persona->guardar();
+        echo json_encode(["exito" => true, "msg" => "Usuario registrado correctamente"]);
+    } catch (PDOException $th) {
+        echo json_encode(["exito" => false, "msg" => "Se presentó un error"]);
     }
-} else {
-    $response['message'] = 'Método de solicitud no válido.';
-}
-
-echo json_encode($response);
+    
 ?>
+
