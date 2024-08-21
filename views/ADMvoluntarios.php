@@ -18,7 +18,7 @@
 <br>
 <nav class="navbaruserad navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../admin.php">
+            <a class="navbar-brand" href="admin.php">
                 <img src="./assets/img/Logo.png" style="height: 80px; width: 80px" alt="Logo">
                 <strong>INMIGRAWEB ADMIN</strong>
             </a>
@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./admin.php">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="admin.php">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./ADMdonaciones.php">Donaciones</a>
