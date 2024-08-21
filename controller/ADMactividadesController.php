@@ -123,7 +123,6 @@ switch ($_GET["op"]) {
         $actividad->setLugar($lugar);
         $actividad->setFecha($fecha);
         $actividad->setHora($hora);
-        $actividad->setHora($hora);
         $actividad->setEstado($estado);
         $modificados = $actividad->actualizarDonacion();
         ADMactividadesModel::desconectar();

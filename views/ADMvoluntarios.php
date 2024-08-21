@@ -100,7 +100,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="residencia">Residencia</label>
+                      <label for="residencia">Provincia de Residencia</label>
                       <input type="text" class="form-control" id="residencia" name="residencia" required>
                     </div>
                   </div>

@@ -1,5 +1,5 @@
 <?php
-require_once '../config/SoliConexion.php';
+require_once '../config/Conexion.php';
 
 class SolicitudModel extends Conexion {
 
